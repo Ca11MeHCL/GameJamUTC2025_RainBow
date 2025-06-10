@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Cloud"))
         {
             Debug.Log("Enemy collided with Cloud");
+            speed = 0f; // Stop the enemy's movement
         }
     }
 

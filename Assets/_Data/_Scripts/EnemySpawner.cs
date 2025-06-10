@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    private List<float> spawnedEnemyPositions = new List<float> { 2.45f, 1.11f, -0.19f, -1.43f, -2.78f, -4.17f }; //vị trí của các hàng 
     private void Start()
     {
         StartCoroutine(SpawnEnemies());
@@ -26,10 +28,9 @@ public class EnemySpawner : MonoBehaviour
                 animator.enabled = true;
                 animator.Play("Idle", 0, 0f);
 
-                // Chờ frame để animator cập nhật
+                
                 yield return null;
 
-                // Chờ animation Idle chạy xong
                 float idleLength = animator.GetCurrentAnimatorStateInfo(0).length;
                 yield return new WaitForSeconds(idleLength);
             }
@@ -42,10 +43,8 @@ public class EnemySpawner : MonoBehaviour
         {
             animator.Play("Disappear");
 
-            // Chờ frame để animator cập nhật
             yield return null;
 
-            // Chờ animation Disappear chạy xong
             float disappearLength = animator.GetCurrentAnimatorStateInfo(0).length;
             yield return new WaitForSeconds(disappearLength);
 
@@ -56,8 +55,10 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         Vector3 spawnPosition = enemyContainer.transform.position + new Vector3(0, 0.5f, 0);
-        float x = spawnPosition.x + Random.Range(-2f, -1f); // sửa lại cho đúng thứ tự
-        float y = Random.Range(-5f, 5f);
+        float x = spawnPosition.x + Random.Range(-2f, -1f);
+        int randomIndex = Random.Range(0, spawnedEnemyPositions.Count);
+        float y = spawnedEnemyPositions[randomIndex];
+        spawnedEnemyPositions.RemoveAt(randomIndex); // Xóa vị trí đã sử dụng để tránh trùng lặp
         Vector3 targetPosition = new Vector3(x, y, 0);
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
@@ -75,13 +76,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if (animator == null) yield break;
 
-        animator.speed = -1f;                        // Phát ngược
-        animator.Play(clipName, 0, 1f);              // Bắt đầu từ cuối clip
-
+        animator.speed = -1f;         
+        animator.Play(clipName, 0, 1f);      
         // Đợi clip chạy ngược xong
         float clipLength = animator.runtimeAnimatorController.animationClips
             .FirstOrDefault(c => c.name == clipName)?.length ?? 0f;
-
         yield return new WaitForSeconds(clipLength);
         animator.speed = 1f;                
     }
