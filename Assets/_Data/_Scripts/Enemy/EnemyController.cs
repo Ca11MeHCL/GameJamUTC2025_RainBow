@@ -20,10 +20,9 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Cloud"))
+        if (other.CompareTag("Cloud") || other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy collided with Cloud");
-            speed = 0f; // Stop the enemy's movement
+            speed = 0.5f; // slow the enemy's movement
         }
     }
 
