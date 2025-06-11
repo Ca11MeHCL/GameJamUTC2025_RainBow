@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2495888857180951359}
   - component: {fileID: 493119773271802215}
   - component: {fileID: 7566525845472255278}
+  - component: {fileID: 2666387564576276756}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -175,6 +176,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2666387564576276756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456426293675873856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e410050f9dca6a94dbc8e16502cce41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  spriteRenderer: {fileID: 5487525831427064738}
+  type: 1
 --- !u!1001 &9111624908454925126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +202,18 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
       propertyPath: m_Name
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
       propertyPath: m_SortingLayer
@@ -259,5 +287,10 @@ PrefabInstance:
 --- !u!4 &1380207376157043787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
+  m_PrefabInstance: {fileID: 9111624908454925126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5487525831427064738 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: c66566cb444878a47a0cb03b6155a400, type: 3}
   m_PrefabInstance: {fileID: 9111624908454925126}
   m_PrefabAsset: {fileID: 0}

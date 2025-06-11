@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7421359383108648941}
+  bulletPrefab: {fileID: 8349704897319792714, guid: 9820113e0edeab2458a7d5b33dc41ead, type: 3}
+  shootInterval: 5
 --- !u!95 &7421359383108648941
 Animator:
   serializedVersion: 5
