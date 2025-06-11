@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorSpawnerRandom : ImpBehaviour
 {
+    [Header("ColorSpawnerRandom")]
     [SerializeField] protected ColorSpawnCtrl colorSpawnCtrl;
     public ColorSpawnCtrl ColorSpawnCtrl { get => colorSpawnCtrl; }
 
@@ -55,7 +56,7 @@ public class ColorSpawnerRandom : ImpBehaviour
         _checkRandoms = new List<int>();
         for (int i = 0; i < this.colorSpawnCtrl.SpawnPoints.CellColorCtrls.Count; i++)
         {
-            if (this.colorSpawnCtrl.SpawnPoints.CellColorCtrls[i].ColorsSpawned.Count > 0) continue;
+            if (this.colorSpawnCtrl.SpawnPoints.CellColorCtrls[i].PetColorCtrls.Count > 0) continue;
             this._checkRandoms.Add(i);
         }
     }

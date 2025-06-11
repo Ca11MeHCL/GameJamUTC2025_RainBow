@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnPoints : ImpBehaviour
 {
+    [Header("SpawnPoints")]
     [SerializeField] protected List<Transform> points;
 
     protected override void LoadComponents()
