@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorSpawnPointsCtrl : SpawnPoints
 {
+    [Header("ColorSpawnPointsCtrl")]
     [SerializeField] protected List<CellColorCtrl> cellColorCtrls;
     public List<CellColorCtrl> CellColorCtrls { get => cellColorCtrls; }
 
@@ -28,7 +29,7 @@ public class ColorSpawnPointsCtrl : SpawnPoints
     {
         foreach (CellColorCtrl _cell in cellColorCtrls)
         {
-            _cell.LoadColorsSpawned();
+            _cell.LoadPetColorCtrl();
         }
     }
 }

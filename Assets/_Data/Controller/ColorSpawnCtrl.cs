@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorSpawnCtrl : ImpBehaviour
 {
+    [Header("ColorSpawnCtrl")]
     [SerializeField] protected ColorSpawner colorSpawner;
     public ColorSpawner ColorSpawner { get => colorSpawner; }
 

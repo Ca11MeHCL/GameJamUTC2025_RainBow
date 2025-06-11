@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorSpawner : Spawner
 {
+    [Header("ColorSpawner")]
     private static ColorSpawner _instance;
     public static ColorSpawner Instance {
         get
