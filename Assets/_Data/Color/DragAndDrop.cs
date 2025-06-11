@@ -98,6 +98,7 @@ public class DragAndDrop : ImpBehaviour
         for (int i = 0; i < draggedPets.Count; i++)
         {
             draggedPets[i].transform.position = originalPositions[i];
+            draggedPets[i].SpriteRenderer.sortingOrder -= 10;
         }
 
         Debug.Log("Khong ghep duoc");

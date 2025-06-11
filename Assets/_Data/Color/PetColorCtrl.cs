@@ -17,7 +17,7 @@ public class PetColorCtrl : ImpBehaviour
     protected virtual void LoadSpriteRenderer()
     {
         if (this.spriteRenderer != null) return;
-        this.spriteRenderer = GetComponent<SpriteRenderer>();
+        this.spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Debug.Log(transform.name + ": LoadSpriteRenderer", gameObject);
     }
 }

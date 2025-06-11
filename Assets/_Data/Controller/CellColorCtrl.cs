@@ -8,7 +8,7 @@ public class CellColorCtrl : ImpBehaviour
     [SerializeField] protected List<PetColorCtrl> petColorCtrls;
     public List<PetColorCtrl> PetColorCtrls { get => petColorCtrls; }
 
-    [SerializeField] protected Vector3 colorDeviation = new Vector3(0, 0.1f, 0);
+    [SerializeField] protected Vector3 colorDeviation = new Vector3(0, 0.19f, 0);
     public Vector3 GetColorDeviation { get => colorDeviation; }
 
     public virtual void LoadPetColorCtrl()
