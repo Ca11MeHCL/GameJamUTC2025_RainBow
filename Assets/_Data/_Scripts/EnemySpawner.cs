@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using MoreMountains.Tools;
 using UnityEngine;
 
@@ -14,7 +15,6 @@ public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
 
     [SerializeField] private Animator animator;
     [SerializeField] private LevelManager levelManager; 
-    [SerializeField] private BoardController boardController;
     private List<float> spawnedEnemyPositions = new List<float>();
     private void Start()
     {
@@ -104,16 +104,31 @@ public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
         Vector3 targetPosition = new Vector3(x, y, 0);
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        EnemyController enemyController = enemy.GetComponent<EnemyController>();
-        if (enemyController != null)
+        enemy.transform.SetParent(enemyContainer.transform);
+
+        Animator enemyAnimator = enemy.GetComponent<Animator>();
+        
+        if (enemyAnimator != null)
         {
-            enemyController.Jump(spawnPosition, targetPosition);
+            StartCoroutine(PlaySpawnClip(enemyAnimator));
         }
+
+        // Move to target position using DOTween
+        enemy.transform.DOMove(targetPosition, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            // Optional: Trigger additional logic after reaching the target
+            
+        });
 
         spawnedEnemiesCount++;
     }
 
 
+    private IEnumerator PlaySpawnClip(Animator animator)
+    {
+        this.animator.Play("Spawn");
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+    }
     private IEnumerator PlayAnimationReverse(string clipName)
     {
         if (animator == null) yield break;
