@@ -25,6 +25,7 @@ public class ColorSpawnerRandom : ImpBehaviour
 
     public virtual void ColorSpawnRandom()
     {
+        if (!this.colorSpawnCtrl.ColorSpawner.CanSpawn()) return;
         this.LoadChecckRandom();
         if (this.RandomPoint() == null)
         {

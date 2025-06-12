@@ -74,6 +74,7 @@ public class DragAndDrop : ImpBehaviour
     {
         Vector3 _dropPoint = GetMousePos2D();
         Collider2D _hitCollider = Physics2D.OverlapPoint(_dropPoint, LayerMask.GetMask("DragAndDrop"));
+        Collider2D _removeCollider = Physics2D.OverlapPoint(_dropPoint, LayerMask.GetMask("TrashBin"));
 
         if (_hitCollider != null && _hitCollider.gameObject != this.gameObject)
         {
@@ -93,6 +94,18 @@ public class DragAndDrop : ImpBehaviour
 
                 }
             }
+        }
+
+        if (_removeCollider != null)
+        {
+            for (int i = 0; i < this.draggedPets.Count; i++)
+            {
+                ColorSpawner.Instance.Despawn(this.draggedPets[i].transform);
+                
+            }
+            this.cellColorCtrl.LoadPetColorCtrl();
+            Debug.Log("Da bo");
+            return;
         }
 
         for (int i = 0; i < draggedPets.Count; i++)

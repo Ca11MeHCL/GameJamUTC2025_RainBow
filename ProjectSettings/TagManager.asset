@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - Water
   - UI
   - DragAndDrop
-  - 
+  - TrashBin
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
     locked: 0
   - name: Color
     uniqueID: 2218587065
+    locked: 0
+  - name: Bullet
+    uniqueID: 624037625
     locked: 0

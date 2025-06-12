@@ -31,4 +31,23 @@ public class ColorSpawner : Spawner
             return;
         }
     }
+
+    [SerializeField] protected int energySpawn = 10;
+    public int EnergySpawn { get { return energySpawn; } set { energySpawn = value; } }
+
+    [SerializeField] protected int energySpawnIncrease = 10;
+    public int EnergySpawnIncrease { get { return energySpawnIncrease; } }
+
+    public bool CanSpawn()
+    {
+        if (!EnergyManager.Instance.CanUseEnergy(energySpawn))
+        {
+            Debug.Log("Khong du nang luong");
+            return false;
+        }
+        Debug.Log("Energy need: " + this.EnergySpawn);
+        this.energySpawn += this.energySpawnIncrease;
+        EnergyManager.Instance.EnergyNeedTxt.text = this.energySpawn.ToString();
+        return true;
+    }
 }
