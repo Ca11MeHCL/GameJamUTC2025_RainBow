@@ -7,6 +7,8 @@ TagManager:
   - Cloud
   - Enemy
   - Attack
+  - Bullet
+  - Color
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - UI
   - Background
   - Ground
-  - 
+  - DragAndDrop
   - 
   - 
   - 
@@ -55,4 +57,10 @@ TagManager:
     locked: 0
   - name: Elements
     uniqueID: 2236337637
+    locked: 0
+  - name: Color
+    uniqueID: 1901434353
+    locked: 0
+  - name: Bullet
+    uniqueID: 3461962251
     locked: 0
