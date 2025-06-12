@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public struct EGameOver
 {
     
@@ -16,9 +18,13 @@ public struct EEarnScore
 /// </summary>
 public struct EEnemyDie
 {
-    
-}
+    public Vector3 position;
 
+    public EEnemyDie(Vector3 pos)
+    {
+        position = pos;
+    }
+}
 /// <summary>
 /// When data changed
 /// </summary>

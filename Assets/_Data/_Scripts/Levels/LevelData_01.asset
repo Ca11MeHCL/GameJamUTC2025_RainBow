@@ -15,7 +15,7 @@ MonoBehaviour:
   spawnInterval: 2
   numberOfEnemies: 3
   rowPositions:
-  - -0.62
-  - -2.16
-  - -3.7
-  - -5.25
+  - 3.21
+  - 0.97
+  - -1.02
+  - -3.04
