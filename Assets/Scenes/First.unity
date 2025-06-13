@@ -5579,7 +5579,7 @@ GameObject:
   - component: {fileID: 913985668}
   - component: {fileID: 913985667}
   m_Layer: 0
-  m_Name: CoinSpawner
+  m_Name: EnergySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5597,7 +5597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78cda86fa598f1743b2bf5c316661b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 1888187467105361660, guid: d1a041ef264435343b32b6407d0727e7, type: 3}
+  energyPrefab: {fileID: 5704108912298735734, guid: b0d2429ad78bab148a9b94d94612ee01, type: 3}
 --- !u!4 &913985668
 Transform:
   m_ObjectHideFlags: 0

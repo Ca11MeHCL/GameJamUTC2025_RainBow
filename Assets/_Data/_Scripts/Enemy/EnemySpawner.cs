@@ -113,13 +113,12 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
 
         GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
 
-        Animator enemyAnimator = enemy.GetComponent<Animator>();
-        if (enemyAnimator != null)
+        var enemyCtrl = enemy.GetComponent<EnemyController>();
+        if (enemyCtrl != null)
         {
-            StartCoroutine(PlayClip(enemyAnimator, "Spawn"));
+            enemyCtrl.PlaySpawnAnimation();
+            enemyCtrl.MoveTo(targetPosition);
         }
-
-        enemy.transform.DOMove(targetPosition, 1f).SetEase(Ease.OutQuad);
     }
 
     private IEnumerator PlayClip(Animator eanimator, string clipName)

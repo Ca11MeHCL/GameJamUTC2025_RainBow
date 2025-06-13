@@ -83,11 +83,12 @@ public class EnergyManager : ImpBehaviour
         Debug.Log(transform.name + ": LoadEnergyNeedTxt", gameObject);
     }
 
-    protected virtual void Add(int _energy)
+    public void Add(int _energy)
     {
         this.energy += _energy;
         this.UpdateUI();
     }
+
 
     protected virtual void Sub(int _energy)
     {
