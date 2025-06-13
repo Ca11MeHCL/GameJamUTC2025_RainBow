@@ -1,3 +1,4 @@
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,6 +75,7 @@ public class DragAndDrop : ImpBehaviour
     {
         Vector3 _dropPoint = GetMousePos2D();
         Collider2D _hitCollider = Physics2D.OverlapPoint(_dropPoint, LayerMask.GetMask("DragAndDrop"));
+        Collider2D _removeCollider = Physics2D.OverlapPoint(_dropPoint, LayerMask.GetMask("TrashBin"));
 
         if (_hitCollider != null && _hitCollider.gameObject != this.gameObject)
         {
@@ -87,17 +89,69 @@ public class DragAndDrop : ImpBehaviour
                         this.draggedPets[i].transform.SetParent(_targetDrop.transform);
                         this.draggedPets[i].transform.position = _targetDrop.transform.position + i * this.cellColorCtrl.GetColorDeviation;
                     }
+                    bool playMergeAnim = false;
+                    if (_targetDrop.cellColorCtrl.PetColorCtrls.Count != 0) playMergeAnim = true;
+
                     this.cellColorCtrl.LoadPetColorCtrl();
                     _targetDrop.cellColorCtrl.LoadPetColorCtrl();
+
+                    if (playMergeAnim) _targetDrop.cellColorCtrl.PetColorCtrls[_targetDrop.cellColorCtrl.PetColorCtrls.Count - 1].PlayDropDown();
                     return;
 
                 }
             }
         }
 
+        if (_removeCollider != null)
+        {
+            Vector3 pivot = this.draggedPets[0].transform.position;
+            for (int i = 0; i < this.draggedPets.Count; i++)
+            {
+                Transform t = this.draggedPets[i].transform;
+                GameObject obj = t.gameObject;
+
+                float rotateDuration = 0.3f;
+                float shrinkDuration = 0.6f;
+
+                // Tính góc xoay ngẫu nhiên
+                float angle = Random.Range(0f, 30f);
+                angle *= (i % 2 == 0) ? -1f : 1f;
+
+                // Tính vị trí sau khi quay quanh pivot
+                Vector3 dir = t.position - pivot;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                Vector3 rotatedPos = pivot + rotation * dir;
+
+                // Sequence: Di chuyển → Xoay → Thu nhỏ → Despawn
+                Sequence seq = DOTween.Sequence();
+
+                // Di chuyển đến vị trí xoay quanh pivot
+                seq.Append(t.DOMove(rotatedPos, rotateDuration).SetEase(Ease.OutQuad));
+
+                // Xoay theo trục Z
+                seq.Join(t.DORotate(
+                    new Vector3(0, 0, t.eulerAngles.z + angle),
+                    rotateDuration,
+                    RotateMode.Fast
+                ).SetEase(Ease.OutQuad));
+
+                // Thu nhỏ sau khi quay xong
+                seq.Append(t.DOScale(Vector3.zero, shrinkDuration).SetEase(Ease.InQuad));
+
+                // Gọi despawn khi xong hiệu ứng
+                seq.OnComplete(() => {
+                    ColorSpawner.Instance.Despawn(t);
+                    this.cellColorCtrl.LoadPetColorCtrl();
+                });
+                //ColorSpawner.Instance.Despawn(this.draggedPets[i].transform);
+            }
+            return;
+        }
+
         for (int i = 0; i < draggedPets.Count; i++)
         {
             draggedPets[i].transform.position = originalPositions[i];
+            draggedPets[i].SpriteRenderer.sortingOrder -= 10;
         }
 
         Debug.Log("Khong ghep duoc");

@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float jumpHeight = 2.0f; // Maximum height of the jump
     [SerializeField] private float jumpDuration = 0.5f; // Time it takes to complete the jump
     private bool isJumping = true; // Check if the enemy is already jumping
+    CloudController cloud;
 
     #region MonoBehaviour 
 
@@ -20,10 +21,19 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //if (other.CompareTag("Cloud") || other.CompareTag("Enemy"))
         if (other.CompareTag("Cloud"))
         {
-            Debug.Log("Enemy collided with Cloud");
-            speed = 0f; // Stop the enemy's movement
+            speed = 0f;
+            cloud = other.GetComponentInChildren<CloudController>();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Cloud"))
+        {
+            if (cloud.currentHP == 0) this.speed = 2f;
         }
     }
 
