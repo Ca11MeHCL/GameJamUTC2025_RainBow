@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    public int damage = 1;                 // Sát thương gây ra
+    public int damage = 100;                 // Sát thương gây ra
     public string enemyTag = "Enemy";         // Tag của enemy
     private Animator animator;
     private bool hasHit = false;
@@ -10,6 +10,11 @@ public class AttackController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        hasHit = false;
     }
 
     private void Start()
@@ -40,8 +45,12 @@ public class AttackController : MonoBehaviour
                 health.TakeDamage(damage);
             }
 
-            // Hủy sau thời gian animation (tuỳ thời lượng clip "Explosion")
-            Destroy(gameObject, 0.3f);
+            Vector3 pos = transform.position;
+            Quaternion rot = Quaternion.Euler(0f, 0f, 90f);
+            Transform obj = FXSpawner.Instance.Spawn("BulletImpactFX", pos, rot);
+            obj.gameObject.SetActive(true);
+
+            ColorBulletSpawner.Instance.Despawn(this.transform);
         }
     }
 }

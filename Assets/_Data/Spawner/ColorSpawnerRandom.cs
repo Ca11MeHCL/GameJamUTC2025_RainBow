@@ -25,13 +25,13 @@ public class ColorSpawnerRandom : ImpBehaviour
 
     public virtual void ColorSpawnRandom()
     {
-        if (!this.colorSpawnCtrl.ColorSpawner.CanSpawn()) return;
         this.LoadChecckRandom();
         if (this.RandomPoint() == null)
         {
             Debug.Log("Khong con cho de spawn");
             return;
         }
+        if (!this.colorSpawnCtrl.ColorSpawner.CanSpawn()) return;
 
         Transform _randomPoint = this.RandomPoint().transform;
         Vector3 pos = _randomPoint.position;
@@ -40,6 +40,8 @@ public class ColorSpawnerRandom : ImpBehaviour
         Transform prefab = this.colorSpawnCtrl.ColorSpawner.RandomPrefab();
         Transform obj = this.colorSpawnCtrl.ColorSpawner.Spawn(prefab, pos, rot);
         obj.gameObject.SetActive(true);
+        if (obj.gameObject.GetComponent<PetColorCtrl>().SpriteRenderer.sortingOrder > 10)
+            obj.gameObject.GetComponent<PetColorCtrl>().SpriteRenderer.sortingOrder -= 10;
         obj.SetParent(_randomPoint.transform);
 
         this.colorSpawnCtrl.SpawnPoints.LoadColorSpawnedInList();

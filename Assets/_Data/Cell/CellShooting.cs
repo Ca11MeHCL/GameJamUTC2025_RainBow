@@ -33,6 +33,7 @@ public class CellShooting : ImpBehaviour
 
     protected virtual void Shooting()
     {
+        if (!this.CheckHasEnemy()) return;
         if (!_isShooting && this.cellColorCtrl.PetColorCtrls.Count > 0)
         {
             this.cellColorCtrl.PetColorCtrls[this.cellColorCtrl.PetColorCtrls.Count - 1].Animator.Play("Pop");
@@ -61,5 +62,34 @@ public class CellShooting : ImpBehaviour
         yield return new WaitForSeconds(shootingSpeed - 0.4f);
 
         _isShooting = false;
+    }
+
+    protected virtual bool CheckHasEnemy()
+    {
+        float rowY = transform.position.y;
+        float startX = transform.position.x;
+        float endX = 15f;
+
+        // Tính center và size của vùng quét
+        float rangeX = Mathf.Abs(endX - startX);
+        float checkHeight = 0.5f;
+
+        // Tính tâm hình chữ nhật để quét
+        float centerX = (startX + endX) / 2f;
+        Vector2 checkCenter = new Vector2(centerX, rowY);
+        Vector2 checkSize = new Vector2(rangeX, checkHeight);
+
+        // Quét collider trong vùng
+        Collider2D[] hits = Physics2D.OverlapBoxAll(checkCenter, checkSize, 0f);
+
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Enemy"))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

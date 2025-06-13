@@ -27,7 +27,7 @@ public class Spawner : ImpBehaviour
             this.prefabs.Add(prefab);
         }
 
-        //this.HidePrefabs();
+        this.HidePrefabs();
 
         Debug.Log(transform.name + ": LoadPrefabs", gameObject);
     }
@@ -39,13 +39,13 @@ public class Spawner : ImpBehaviour
         Debug.Log(transform.name + ": LoadHolder", gameObject);
     }
 
-    //protected virtual void HidePrefabs()
-    //{
-    //    foreach (Transform prefab in this.prefabs)
-    //    {
-    //        prefab.gameObject.SetActive(false);
-    //    }
-    //}
+    protected virtual void HidePrefabs()
+    {
+        foreach (Transform prefab in this.prefabs)
+        {
+            prefab.gameObject.SetActive(false);
+        }
+    }
 
     public virtual Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
     {
