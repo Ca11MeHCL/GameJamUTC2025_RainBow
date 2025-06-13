@@ -2822,7 +2822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorSpawner: {fileID: 420896154}
-  spawnPoints: {fileID: 0}
+  spawnPoints: {fileID: 94815601}
 --- !u!114 &420896154
 MonoBehaviour:
   m_ObjectHideFlags: 0

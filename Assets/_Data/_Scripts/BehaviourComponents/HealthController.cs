@@ -75,7 +75,7 @@ public class HealthController : MonoBehaviour
     private IEnumerator FlashRedThenWhite()
     {
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = Color.white;
     }
 

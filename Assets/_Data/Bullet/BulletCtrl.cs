@@ -35,7 +35,7 @@ public class BulletCtrl : ImpBehaviour
     private void Update()
     {
         // Xoay tròn liên tục
-        transform.Rotate(Vector3.back * spinSpeed * Time.deltaTime * 2f);
+        transform.Rotate( spinSpeed * Time.deltaTime * 2f*Vector3.back );
     }
 
     protected virtual void DoSpawnEffect()

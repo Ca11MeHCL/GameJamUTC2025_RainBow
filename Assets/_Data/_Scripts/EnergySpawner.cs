@@ -1,9 +1,9 @@
 using MoreMountains.Tools;
 using UnityEngine;
 
-public class CoinSpawner : MonoBehaviour,MMEventListener<EEnemyDie>
+public class EnergySpawner : MonoBehaviour,MMEventListener<EEnemyDie>
 {
-    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private GameObject energyPrefab;
 
     private void OnEnable()
     {
@@ -16,7 +16,7 @@ public class CoinSpawner : MonoBehaviour,MMEventListener<EEnemyDie>
     }
     private void SpawnCoin(Vector3 position)
     {
-        Instantiate(coinPrefab, position, Quaternion.identity);
+        Instantiate(energyPrefab, position, Quaternion.identity);
     }
 
     public void OnMMEvent(EEnemyDie eventType)

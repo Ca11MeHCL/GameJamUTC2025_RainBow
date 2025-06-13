@@ -45,12 +45,14 @@ public class AttackController : MonoBehaviour
                 health.TakeDamage(damage);
             }
 
-            Vector3 pos = transform.position;
+           /* Vector3 pos = transform.position;
             Quaternion rot = Quaternion.Euler(0f, 0f, 90f);
             Transform obj = FXSpawner.Instance.Spawn("BulletImpactFX", pos, rot);
             obj.gameObject.SetActive(true);
 
-            ColorBulletSpawner.Instance.Despawn(this.transform);
+            ColorBulletSpawner.Instance.Despawn(this.transform);*/
+           // => animation vu nổ 
+           Debug.Log("Animation nổ cái bùm!");
         }
     }
 }

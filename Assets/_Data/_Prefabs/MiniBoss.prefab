@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.5199997
       objectReference: {fileID: 0}
+    - target: {fileID: 2666387564576276756, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666387564576276756, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 8963530336735514931}
     - target: {fileID: 4456426293675873856, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Name
       value: MiniBoss
@@ -178,5 +186,10 @@ PrefabInstance:
 --- !u!4 &2550228955143978714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 065acd74252f0de48909eec9fd3484cc, type: 3}
+  m_PrefabInstance: {fileID: 5634493958282133975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8963530336735514931 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 065acd74252f0de48909eec9fd3484cc, type: 3}
   m_PrefabInstance: {fileID: 5634493958282133975}
   m_PrefabAsset: {fileID: 0}

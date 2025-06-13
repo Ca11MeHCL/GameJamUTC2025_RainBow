@@ -24,18 +24,18 @@ public class EnemyController : MonoBehaviour
         //if (other.CompareTag("Cloud") || other.CompareTag("Enemy"))
         if (other.CompareTag("Cloud"))
         {
-            speed = 0f;
+            speed = 0.5f;
             cloud = other.GetComponentInChildren<CloudController>();
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Cloud"))
         {
             if (cloud.currentHP == 0) this.speed = 2f;
         }
-    }
+    }*/
 
     #endregion
 
