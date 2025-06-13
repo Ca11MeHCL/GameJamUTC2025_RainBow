@@ -9,6 +9,12 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float speed = 2.0f; // Movement speed
     [SerializeField] private float jumpHeight = 2.0f; // Maximum height of the jump
     [SerializeField] private float jumpDuration = 0.5f; // Time it takes to complete the jump
+    
+    [Header("Values Settings")]
+    [SerializeField] private int score = 100; // Score to be awarded when the enemy dies
+    public int Score => score; 
+    [SerializeField] private int energy = 1; // Energy to be awarded when the enemy dies
+    public int Energy => energy;
     private bool isJumping = true; // Check if the enemy is already jumping
     private Animator animator;
     CloudController cloud;
@@ -19,9 +25,7 @@ public class EnemyController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-
-
+    
     void Update()
         {
             transform.position += speed * Time.deltaTime * Vector3.left;

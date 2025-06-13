@@ -57,9 +57,9 @@ public class HealthController : MonoBehaviour
         }else if (type == Types.Enemy)
         {
             Debug.Log($"{gameObject.name} - Enemy die");
-           /* EnemyController e = gameObject.GetComponent<EnemyController>();
-            e.PlayDieVFX();*/
-            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position));
+           EnemyController e = gameObject.GetComponent<EnemyController>();
+            //e.PlayDieVFX();
+            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position,e.Score,e.Energy));
         }
         
         Destroy(gameObject);

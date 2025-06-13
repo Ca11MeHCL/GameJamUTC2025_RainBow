@@ -14,13 +14,17 @@ public class EnergySpawner : MonoBehaviour,MMEventListener<EEnemyDie>
     {
         this.MMEventStopListening<EEnemyDie>();
     }
-    private void SpawnCoin(Vector3 position)
+    private void SpawnCoin(Vector3 position,int energy)
     {
-        Instantiate(energyPrefab, position, Quaternion.identity);
+        for (int i = 0; i < energy; i++)
+        {
+            Instantiate(energyPrefab, position, Quaternion.identity);
+        }
+        
     }
 
     public void OnMMEvent(EEnemyDie eventType)
     {
-        SpawnCoin(eventType.position);
+        SpawnCoin(eventType.position,  eventType.energy);
     }
 }
