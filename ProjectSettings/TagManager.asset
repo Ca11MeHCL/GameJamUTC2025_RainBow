@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Cloud
+  - Enemy
+  - Attack
   - Bullet
+  - Color
   layers:
   - Default
   - TransparentFX
@@ -12,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Background
+  - Ground
   - DragAndDrop
-  - TrashBin
-  - 
   - 
   - 
   - 
@@ -42,9 +46,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3400905781
+    locked: 0
+  - name: Ground
+    uniqueID: 1887887367
+    locked: 0
+  - name: Cloud
+    uniqueID: 3540234307
+    locked: 0
+  - name: Elements
+    uniqueID: 2236337637
+    locked: 0
   - name: Color
-    uniqueID: 2218587065
+    uniqueID: 1901434353
     locked: 0
   - name: Bullet
-    uniqueID: 624037625
+    uniqueID: 3461962251
     locked: 0

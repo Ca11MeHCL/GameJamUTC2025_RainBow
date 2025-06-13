@@ -19,8 +19,33 @@ public class LevelManager : MonoBehaviour
             Debug.Log("chuyển sang level :" + currentLevelIndex);
             return;
         }
+        else
+        {
+            CreateNewLevel();
+        }
 
         Debug.Log($"Chuyển sang level {currentLevelIndex + 1}");
+    }
+
+    private void CreateNewLevel()
+    {
+        LevelData preLevel = levels[currentLevelIndex];
+        LevelData nextLevel = ScriptableObject.CreateInstance<LevelData>();
+        if (currentLevelIndex <= 5)
+        { 
+            nextLevel.numberOfEnemies = preLevel.numberOfEnemies + 3; //them số  lượng enemy
+            nextLevel.spawnInterval = preLevel.spawnInterval - 0.1f; // giảm thời gian spawn
+            nextLevel.rowPositions = new List<float>(preLevel.rowPositions); // giữ nguyên vị trí hàng
+        }
+        else
+        {
+            nextLevel.numberOfEnemies = preLevel.numberOfEnemies + 5; //them số  lượng enemy
+            nextLevel.spawnInterval = preLevel.spawnInterval - 0.2f; // giảm thời gian spawn
+            nextLevel.rowPositions = new List<float>(preLevel.rowPositions); // giữ nguyên vị trí hàng
+        }
+        
+        levels.Add(nextLevel);
+        
     }
 
     public void RestartLevel()
