@@ -6,16 +6,19 @@ public class BulletCtrl : ImpBehaviour
 {
     [Header("BulletCtrl")]
     [SerializeField] protected float bulletSpeed = 5f;
-    [SerializeField] private float spinSpeed = 360f;
+    [SerializeField] private float spinSpeed = 720f;
     [SerializeField] private Vector3 targetPoint;
 
     private Vector3 startPoint;
     private Rigidbody2D rb;
+    private CircleCollider2D col;
 
     protected override void Awake()
     {
         base.Awake();
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<CircleCollider2D>();
+        col.enabled = false;
     }
 
     private void OnEnable()
@@ -23,6 +26,7 @@ public class BulletCtrl : ImpBehaviour
         rb.velocity = Vector3.zero; // Reset velocity mỗi lần spawn
         transform.localScale = Vector3.zero;
         startPoint = transform.position;
+        col.enabled = false;
 
         // Xoay khi enable
         DoSpawnEffect();
@@ -54,6 +58,7 @@ public class BulletCtrl : ImpBehaviour
                     transform.position = curvedPos;
                 }, 1f, duration).SetEase(Ease.InOutQuad).OnComplete(() =>
                 {
+                    col.enabled = true;
                     // Sau khi đáp xuống điểm target → dùng rigidbody để bay ngang
                     rb.velocity = Vector3.right * bulletSpeed;
                 });

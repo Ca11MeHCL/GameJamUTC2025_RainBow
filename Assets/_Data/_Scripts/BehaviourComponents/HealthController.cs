@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] private int maxHealth = 10; // Maximum health
+    [SerializeField] private int maxHealth = 250; // Maximum health
     private int currentHealth; // Current health
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Types type; // Type of health controller
@@ -29,7 +29,7 @@ public class HealthController : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         StartCoroutine(FlashRedThenWhite());
-        
+
         if (currentHealth <= 0)
         {
             Die();
@@ -49,7 +49,7 @@ public class HealthController : MonoBehaviour
     // Method to handle death
     private void Die()
     {
-        Debug.Log($"{gameObject.name} has died.");
+        //Debug.Log($"{gameObject.name} has died.");
         if (type == Types.Cloud)
         {
             Debug.Log($"{gameObject.name} - Cloud die");

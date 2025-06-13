@@ -45,7 +45,6 @@ public class ColorSpawner : Spawner
             Debug.Log("Khong du nang luong");
             return false;
         }
-        Debug.Log("Energy need: " + this.EnergySpawn);
         this.energySpawn += this.energySpawnIncrease;
         EnergyManager.Instance.EnergyNeedTxt.text = this.energySpawn.ToString();
         return true;

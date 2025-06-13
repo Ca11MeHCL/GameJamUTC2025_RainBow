@@ -2,7 +2,7 @@ using UnityEngine;
 
 public struct EGameOver
 {
-    
+
 }
 
 /// <summary>
@@ -10,7 +10,7 @@ public struct EGameOver
 /// </summary>
 public struct EEarnScore
 {
-    
+
 }
 
 /// <summary>

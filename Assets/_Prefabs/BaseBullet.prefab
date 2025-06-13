@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6326289288741889305}
   - component: {fileID: 4887235757659222454}
   - component: {fileID: 9121543685452085253}
+  - component: {fileID: 8033783236571912207}
   m_Layer: 0
   m_Name: BaseBullet
   m_TagString: Bullet
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 5
-  spinSpeed: 360
+  spinSpeed: 720
   targetPoint: {x: 0, y: 0, z: 0}
 --- !u!50 &9121543685452085253
 Rigidbody2D:
@@ -164,3 +165,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!114 &8033783236571912207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396218534494852553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7651cb539c893e54ea87f0ac8ac2f162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  enemyTag: Enemy

@@ -82,13 +82,12 @@ public class BulletPrefabs : ImpBehaviour
             mf.mesh = CreateSectorMesh(1f, i * anglePerPart, anglePerPart);
         }
 
-        // Thêm controller nếu cần
-        //ColorBulletCtrl ctrl = bullet.GetComponent<ColorBulletCtrl>();
-        //if (ctrl == null)
-        //{
-        //    ctrl = bullet.AddComponent<ColorBulletCtrl>();
-        //}
-        // ctrl.Initialize(colorNames); // Nếu có init
+        AttackController atkCtrl = bullet.GetComponent<AttackController>();
+        if (atkCtrl == null)
+        {
+            atkCtrl = bullet.AddComponent<AttackController>();
+        }
+        atkCtrl.damage *= colorNames.Count;
     }
 
     Mesh CreateSectorMesh(float radius, float startAngleDeg, float angleDeg)
