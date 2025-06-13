@@ -5,44 +5,26 @@ using DG.Tweening;
 using MoreMountains.Tools;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
+public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
 {
-    [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject enemyContainer;
     [SerializeField] private float spawnInterval = 2.0f;
-    [SerializeField] private int numberOfEnemies = 3;
-    private int spawnedEnemiesCount = 0;
 
-    [SerializeField] private Animator animator;
-    [SerializeField] private LevelManager levelManager; 
     private List<float> spawnedEnemyPositions = new List<float>();
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private Animator animator;
+
     private void Start()
     {
         if (levelManager == null)
         {
-            Debug.LogError("LevelManager chưa được gán trong EnemySpawner.");
+            Debug.LogError("LevelManager chưa được gán hoặc không có trên cùng GameObject.");
             return;
         }
 
-        LevelData currentLevel = levelManager.CurrentLevel;
-        if (currentLevel == null)
-        {
-            Debug.LogError("LevelManager không có level hợp lệ.");
-            return;
-        }
-
-        if (currentLevel.rowPositions == null || currentLevel.rowPositions.Count == 0)
-        {
-            Debug.LogError("rowPositions trong LevelData đang trống.");
-            return;
-        }
-
-        spawnInterval = currentLevel.spawnInterval;
-        numberOfEnemies = currentLevel.numberOfEnemies;
-        spawnedEnemyPositions = new List<float>(currentLevel.rowPositions); // clone
-
-        StartCoroutine(SpawnEnemies());
+        LoadCurrentLevelData();
     }
+
     private void OnEnable()
     {
         this.MMEventStartListening<EEndLevel>();
@@ -53,32 +35,58 @@ public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
         this.MMEventStopListening<EEndLevel>();
     }
 
+    private void LoadCurrentLevelData()
+    {
+        LevelData currentLevel = levelManager.CurrentLevel;
+        if (currentLevel == null)
+        {
+            Debug.LogError("Level hiện tại null.");
+            return;
+        }
 
+        if (currentLevel.rowPositions == null || currentLevel.rowPositions.Count == 0)
+        {
+            Debug.LogError("rowPositions trong LevelData trống.");
+            return;
+        }
+
+        spawnInterval = currentLevel.spawnInterval;
+        spawnedEnemyPositions = new List<float>(currentLevel.rowPositions);
+
+        StartCoroutine(PlayClip(animator, "appear"));
+        StartCoroutine(SpawnEnemies());
+    }
 
     private IEnumerator SpawnEnemies()
     {
-        while (spawnedEnemiesCount < numberOfEnemies)
+        LevelData currentLevel = levelManager.CurrentLevel;
+        if (currentLevel == null || currentLevel.enemiesToSpawn == null)
         {
-            if (animator != null)
+            yield break;
+        }
+
+        foreach (var enemyInfo in currentLevel.enemiesToSpawn)
+        {
+            for (int i = 0; i < enemyInfo.spawnCount; i++)
             {
-                animator.enabled = true;
-                animator.Play("Idle", 0, 0f);
+                if (animator != null)
+                {
+                    animator.enabled = true;
+                    animator.Play("Idle", 0, 0f);
+                    yield return null;
 
-                
-                yield return null;
+                    float idleLength = animator.GetCurrentAnimatorStateInfo(0).length;
+                    yield return new WaitForSeconds(idleLength);
+                }
 
-                float idleLength = animator.GetCurrentAnimatorStateInfo(0).length;
-                yield return new WaitForSeconds(idleLength);
+                SpawnEnemy(enemyInfo.enemyPrefab);
+                yield return new WaitForSeconds(spawnInterval);
             }
-
-            SpawnEnemy();
-            yield return new WaitForSeconds(spawnInterval);
         }
 
         if (animator != null)
         {
             animator.Play("Disappear");
-
             yield return null;
 
             float disappearLength = animator.GetCurrentAnimatorStateInfo(0).length;
@@ -88,7 +96,7 @@ public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
         }
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemy(GameObject prefab)
     {
         if (spawnedEnemyPositions == null || spawnedEnemyPositions.Count == 0)
         {
@@ -103,67 +111,28 @@ public class EnemySpawner : MonoBehaviour,MMEventListener<EEndLevel>
         float y = spawnedEnemyPositions[0];
         Vector3 targetPosition = new Vector3(x, y, 0);
 
-        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        enemy.transform.SetParent(enemyContainer.transform);
+        GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
 
         Animator enemyAnimator = enemy.GetComponent<Animator>();
-        
         if (enemyAnimator != null)
         {
-            StartCoroutine(PlaySpawnClip(enemyAnimator));
+            StartCoroutine(PlayClip(enemyAnimator, "Spawn"));
         }
 
-        // Move to target position using DOTween
-        enemy.transform.DOMove(targetPosition, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
-        {
-            // Optional: Trigger additional logic after reaching the target
-            
-        });
-
-        spawnedEnemiesCount++;
+        enemy.transform.DOMove(targetPosition, 1f).SetEase(Ease.OutQuad);
     }
 
-
-    private IEnumerator PlaySpawnClip(Animator animator)
+    private IEnumerator PlayClip(Animator eanimator, string clipName)
     {
-        this.animator.Play("Spawn");
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    }
-    private IEnumerator PlayAnimationReverse(string clipName)
-    {
-        if (animator == null) yield break;
-
-        animator.speed = -1f;         
-        animator.Play(clipName, 0, 1f);      
-        // Đợi clip chạy ngược xong
-        float clipLength = animator.runtimeAnimatorController.animationClips
-            .FirstOrDefault(c => c.name == clipName)?.length ?? 0f;
-        yield return new WaitForSeconds(clipLength);
-        animator.speed = 1f;                
+        eanimator.Play(clipName);
+        yield return new WaitForSeconds(eanimator.GetCurrentAnimatorStateInfo(0).length);
     }
 
     public void OnMMEvent(EEndLevel eventType)
     {
-        // Tăng level hiện tại trong levelManager
-        levelManager.GoToNextLevel(); // Bạn cần đảm bảo hàm này đã có trong LevelManager
+        levelManager.GoToNextLevel();
 
-        // Reset các biến liên quan
-        spawnedEnemiesCount = 0;
-
-        // Lấy dữ liệu level mới
-        LevelData currentLevel = levelManager.CurrentLevel;
-        if (currentLevel == null)
-        {
-            Debug.LogError("LevelManager không có level hợp lệ.");
-            return;
-        }
-
-        spawnInterval = currentLevel.spawnInterval;
-        numberOfEnemies = currentLevel.numberOfEnemies;
-        spawnedEnemyPositions = new List<float>(currentLevel.rowPositions);
-
-        // Bắt đầu spawn enemy mới cho level tiếp theo
-        StartCoroutine(SpawnEnemies());
+        // Load lại dữ liệu level và spawn
+        LoadCurrentLevelData();
     }
-
 }
