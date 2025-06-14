@@ -310,7 +310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 369802342}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589683093}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &369802342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,7 +943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1480235990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589683093}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1480235990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,11 +1047,12 @@ MonoBehaviour:
   musicSource: {fileID: 465773731}
   sfxSource: {fileID: 2140469033}
   MusicSound: {fileID: 8300000, guid: f4041bde6793f3e4799f19e20c09b5ca, type: 3}
-  PopSound: {fileID: 8300000, guid: 555a149c78476694e97f2fa6b162b7ad, type: 3}
+  PopSound: {fileID: 8300000, guid: 41739d73823d97842aa2af750dea8515, type: 3}
   CollectSound: {fileID: 8300000, guid: 6eda4ee8e4a295743948c50fbfab7cb1, type: 3}
   SpawnColorSound: {fileID: 8300000, guid: 41739d73823d97842aa2af750dea8515, type: 3}
   AttackSound: {fileID: 8300000, guid: 336ddd40aa024e746ab7b2461441650f, type: 3}
-  CollectEnergySound: {fileID: 8300000, guid: c60e007251637bd4b9f8a0a441fe64ba, type: 3}
+  CollectEnergySound: {fileID: 8300000, guid: 555a149c78476694e97f2fa6b162b7ad, type: 3}
+  ButtonClickSound: {fileID: 8300000, guid: 3da0d0ecb7af0464a835b41073b1eafe, type: 3}
 --- !u!4 &1589683094
 Transform:
   m_ObjectHideFlags: 0
@@ -1353,9 +1378,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1589683093}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Mute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1950294138}
         m_TargetAssemblyTypeName: ChangeSpriteOnClick, Assembly-CSharp
         m_MethodName: ChangeAudioButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1589683093}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

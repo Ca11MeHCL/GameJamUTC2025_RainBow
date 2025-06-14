@@ -36,7 +36,7 @@ public class HealthController : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.AttackSound);
+        AudioManager.Instance.PlayAttackSound();
 
         if (gameObject.activeInHierarchy)
         {

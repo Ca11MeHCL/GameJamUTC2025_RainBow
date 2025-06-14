@@ -16,7 +16,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip SpawnColorSound;
     public AudioClip AttackSound;
     public AudioClip CollectEnergySound;
+    public AudioClip ButtonClickSound;
 
+    private bool isMute = false; // Track mute state
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -43,5 +45,30 @@ public class AudioManager : MonoBehaviour
     public void PlayPopSound()
     {
         sfxSource.PlayOneShot(PopSound);
+    }
+    public void PlayAttackSound()
+    {
+        sfxSource.volume = 0.2f;
+        sfxSource.PlayOneShot(AttackSound);
+        StartCoroutine(ResetVolumeAfterPlay());
+    }
+
+    private IEnumerator ResetVolumeAfterPlay()
+    {
+        yield return new WaitForSeconds(AttackSound.length);
+        sfxSource.volume = 1f; 
+    }
+    public void PlayButtonClick()
+    {
+        sfxSource.PlayOneShot(ButtonClickSound);
+    }
+
+    public void Mute()
+    {
+        isMute = !isMute;
+        
+        musicSource.mute = isMute;
+        sfxSource.mute = isMute;
+        
     }
 }
