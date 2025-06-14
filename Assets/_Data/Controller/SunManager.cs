@@ -6,33 +6,6 @@ using UnityEngine;
 public class SunManager : ImpBehaviour
 {
     [Header("SunManager")]
-    private static SunManager _instance;
-    public static SunManager Instance
-    {
-        get
-        {
-            if (_instance == null) Debug.LogError("Singleton instance has not been created yet!");
-            return _instance;
-        }
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-        if (_instance == null)
-        {
-            _instance = this;
-            if (transform.parent == null) DontDestroyOnLoad(gameObject);
-            return;
-        }
-
-        if (_instance != this)
-        {
-            Debug.LogWarning("Another instance of SunManager already exists!");
-            Destroy(gameObject);
-            return;
-        }
-    }
 
     [SerializeField] protected int sun = 8;
     public int Sun { get => sun; }

@@ -21,7 +21,7 @@ public class ColorBulletSpawner : Spawner
         if (_instance == null)
         {
             _instance = this;
-            if (transform.parent == null) DontDestroyOnLoad(gameObject);
+            //if (transform.parent == null) DontDestroyOnLoad(gameObject);
             return;
         }
 
