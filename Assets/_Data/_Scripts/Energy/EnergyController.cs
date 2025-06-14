@@ -25,7 +25,7 @@ public class EnergyController : MonoBehaviour
             .OnComplete(() =>
             { 
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.CollectEnergySound);
-                EnergyManager.Instance?.Add(1);
+                EnergyManager.Instance?.Add(20);
                 Destroy(gameObject);
             }); // tự hủy sau khi bay đến nơi
     }

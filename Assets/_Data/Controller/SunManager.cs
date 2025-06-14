@@ -7,9 +7,6 @@ public class SunManager : ImpBehaviour
 {
     [Header("SunManager")]
 
-    [SerializeField] protected int sun = 8;
-    public int Sun { get => sun; }
-
     [SerializeField] protected GameObject _sunPoint;
 
     [SerializeField] protected List<SunController> sunControllers;
@@ -18,10 +15,13 @@ public class SunManager : ImpBehaviour
     private Dictionary<float, float> lastSunActivationTimes = new Dictionary<float, float>();
     private float sunCooldown = 5f;
 
+    private Collider2D col;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadSunControllers();
+        col = GetComponent<Collider2D>();
     }
 
     protected virtual void LoadSunControllers()
@@ -65,8 +65,16 @@ public class SunManager : ImpBehaviour
                 {
                     lastSun.SunActive(targetPosition);
                     sunControllers.RemoveAt(sunControllers.Count - 1);
+
+                    if (sunControllers.Count == 0) StartCoroutine(DisableColCoroutine());
                 }
             }
         }
+    }
+
+    private IEnumerator DisableColCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        col.enabled = false;
     }
 }

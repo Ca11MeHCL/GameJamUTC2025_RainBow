@@ -25,30 +25,32 @@ public class EnemyController : MonoBehaviour
     private bool isStoppedBySun = false;
     public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
 
+    [SerializeField] private DeadMenuCtrl deadMenuCtrl;
+
     #region MonoBehaviour 
-    
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
+        deadMenuCtrl = GameObject.Find("PauseButton").GetComponent<DeadMenuCtrl>();
     }
-    
+
     void Update()
-        {
-            transform.position += speed * Time.deltaTime * Vector3.left;
-            checkOutScreen();
-        }
+    {
+        transform.position += speed * Time.deltaTime * Vector3.left;
+        checkOutScreen();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Cloud"))
         {
-            speed = 0.5f;
-
             cloud = other.GetComponentInChildren<CloudController>();
             if (cloud != null && cloud.currentHP > 0)
             {
                 speed = 0f;
+                animator.Play("Attack");
             }
         }
     }
@@ -59,21 +61,23 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Cloud"))
         {
             speed = 2f;
+            animator.Play("Idle");
             cloud = null;
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (isStoppedBySun) return;
-        if (collision.CompareTag("Cloud"))
-        {
-            if (cloud != null && cloud.currentHP == 0)
-            {
-                speed = 2f;
-            }
-        }
-    }*/
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (isStoppedBySun) return;
+    //    if (collision.CompareTag("Cloud"))
+    //    {
+    //        if (cloud != null && cloud.currentHP == 0)
+    //        {
+    //            speed = 2f;
+    //            animator.Play("Idle");
+    //        }
+    //    }
+    //}
 
     #endregion
 
@@ -109,12 +113,14 @@ public class EnemyController : MonoBehaviour
     #region Private Methods
 
     private void checkOutScreen()
+    {
+        if(transform.position.x < -10f)
         {
-            if(transform.position.x < -10f) 
-            {
-                Destroy(gameObject); 
-            }
+            deadMenuCtrl.Dead();
+            //Destroy(gameObject); 
         }
+    }
+
     private IEnumerator PlaySpawnAnimationCoroutine()
     {
         if (animator == null)
