@@ -29,6 +29,7 @@ public class HealthController : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AttackSound);
         StartCoroutine(FlashRedThenWhite());
 
         if (currentHealth <= 0)

@@ -25,10 +25,7 @@ public class AttackController : MonoBehaviour
 
     private void Start()
     {
-        if (animator != null)
-        {
-            animator.Play("Shoot");
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

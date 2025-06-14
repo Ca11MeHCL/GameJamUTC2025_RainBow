@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip MusicSound;
     public AudioClip PopSound;
     public AudioClip CollectSound;
+    public AudioClip SpawnColorSound;
+    public AudioClip AttackSound;
+    public AudioClip CollectEnergySound;
 
     private void Awake()
     {

@@ -24,6 +24,7 @@ public class EnergyController : MonoBehaviour
         transform.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad)
             .OnComplete(() =>
             { 
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.CollectEnergySound);
                 EnergyManager.Instance?.Add(1);
                 Destroy(gameObject);
             }); // tự hủy sau khi bay đến nơi
