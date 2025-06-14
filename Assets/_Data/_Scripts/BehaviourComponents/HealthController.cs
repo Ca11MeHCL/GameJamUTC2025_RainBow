@@ -69,7 +69,9 @@ public class HealthController : MonoBehaviour
         }else if (type == Types.Enemy)
         {
             Debug.Log($"{gameObject.name} - Enemy die");
-           EnemyController e = gameObject.GetComponent<EnemyController>();
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            EnemyController e = gameObject.GetComponent<EnemyController>();
+            e.Speed = 0f;
             e.PlayDieVFX();
             Vector3 offset = new Vector3 (0, -0.5f, 0);
             MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position + offset,e.Score,e.Energy));

@@ -48,7 +48,8 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayAttackSound()
     {
-        sfxSource.volume = 0.2f;
+        //sfxSource.volume = 0f;
+        
         sfxSource.PlayOneShot(AttackSound);
         StartCoroutine(ResetVolumeAfterPlay());
     }
