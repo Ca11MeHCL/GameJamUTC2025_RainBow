@@ -50,7 +50,7 @@ public class CellShooting : ImpBehaviour
 
         Transform prefab = ColorBulletSpawner.Instance.GetBulletPrefab(this.cellColorCtrl.PetColorCtrls);
         Transform obj = ColorBulletSpawner.Instance.Spawn(prefab, pos, rot);
-        obj.GetComponent<BulletCtrl>().SetTarget(this.transform.position + new Vector3(1f, 0.4f, 0));
+        obj.GetComponent<BulletCtrl>().SetTarget(this.transform.position + new Vector3(1f, 0.4f, 1));
         obj.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.4f);
