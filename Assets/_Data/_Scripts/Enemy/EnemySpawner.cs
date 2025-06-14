@@ -129,9 +129,15 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
 
     public void OnMMEvent(EEndLevel eventType)
     {
-        levelManager.GoToNextLevel();
-
-        // Load lại dữ liệu level và spawn
-        LoadCurrentLevelData();
+        Debug.Log("EnemySpawner nhận sự kiện kết thúc level.");
+        StartCoroutine(WaitAndLoadNextLevel());
     }
+
+    private IEnumerator WaitAndLoadNextLevel()
+    {
+        yield return new WaitForSeconds(3f); // ⏳ Nghỉ 3 giây để tạo level mới xong
+
+        LoadCurrentLevelData(); // Sau đó mới load enemy từ level mới
+    }
+
 }
