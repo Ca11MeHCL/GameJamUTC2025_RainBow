@@ -1,5 +1,6 @@
 using System.Collections;
 using MoreMountains.Tools;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
@@ -35,6 +36,7 @@ public class HealthController : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AttackSound);
         StartCoroutine(FlashRedThenWhite());
 
         if (currentHealth <= 0)
@@ -63,9 +65,12 @@ public class HealthController : MonoBehaviour
         }else if (type == Types.Enemy)
         {
             Debug.Log($"{gameObject.name} - Enemy die");
-            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position));
+           EnemyController e = gameObject.GetComponent<EnemyController>();
+            e.PlayDieVFX();
+            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position,e.Score,e.Energy));
         }
-        Destroy(gameObject);
+        
+       
     }
 
     // Method to get current health
@@ -82,7 +87,7 @@ public class HealthController : MonoBehaviour
     private IEnumerator FlashRedThenWhite()
     {
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = Color.white;
     }
 

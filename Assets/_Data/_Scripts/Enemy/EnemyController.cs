@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -10,9 +11,23 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private float jumpHeight = 2.0f; // Maximum height of the jump
     [SerializeField] private float jumpDuration = 0.5f; // Time it takes to complete the jump
+    
+    [Header("Values Settings")]
+    [SerializeField] private int score = 100; // Score to be awarded when the enemy dies
+    public int Score => score; 
+    [SerializeField] private int energy = 1; // Energy to be awarded when the enemy dies
+    public int Energy => energy;
     private bool isJumping = true; // Check if the enemy is already jumping
+    private Animator animator;
     CloudController cloud;
 
+    #region MonoBehaviour
+    
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     private bool isStoppedBySun = false;
     public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
 
@@ -28,6 +43,8 @@ public class EnemyController : MonoBehaviour
     {
         if (other.CompareTag("Cloud"))
         {
+            speed = 0.5f;
+            cloud = other.GetComponentInChildren<CloudController>();
             cloud = other.GetComponentInChildren<CloudController>();
             if (cloud != null && cloud.currentHP > 0)
             {
@@ -46,7 +63,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (isStoppedBySun) return;
         if (collision.CompareTag("Cloud"))
@@ -56,10 +73,35 @@ public class EnemyController : MonoBehaviour
                 speed = 2f;
             }
         }
-    }
+    }*/
 
     #endregion
+    #region Public Methods
 
+    public void PlaySpawnAnimation()
+    {
+        StartCoroutine(PlaySpawnAnimationCoroutine());
+    }
+    public void MoveTo(Vector3 targetPos)
+    {
+        transform.DOMove(targetPos, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            PlayIdleLoop();
+        });
+    }
+    private void PlayIdleLoop()
+    {
+        if (animator != null)
+        {
+            animator.Play("Idle");
+        }
+    }
+    public void PlayDieVFX()
+    {
+        StartCoroutine(PlayDieVFXCoroutine());
+      
+    }
+    #endregion
     #region Private Methods
 
     private void checkOutScreen()
@@ -69,7 +111,33 @@ public class EnemyController : MonoBehaviour
                 Destroy(gameObject); 
             }
         }
+    private IEnumerator PlaySpawnAnimationCoroutine()
+    {
+        if (animator == null)
+        {
+            Debug.LogWarning("Animator not found on " + gameObject.name);
+            yield break;
+        }
 
+        animator.Play("Spawn");
+
+        // Chờ animation "Spawn" chạy xong
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Sau đó chuyển sang "Idle"
+        animator.Play("Idle");
+    }
+    private IEnumerator PlayDieVFXCoroutine()
+    {
+        if (animator != null)
+        {
+            animator.Play("Die");
+            Debug.Log("bat coroutine die");
+            // Wait until the "Die" animation finishes
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        }
+        Destroy(gameObject);
+    }
     #endregion
     
     #region Jump Handler Methods
