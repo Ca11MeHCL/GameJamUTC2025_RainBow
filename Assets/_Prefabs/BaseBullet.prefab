@@ -177,5 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651cb539c893e54ea87f0ac8ac2f162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: 0
   damage: 100
-  enemyTag: Enemy
+  animator: {fileID: 0}

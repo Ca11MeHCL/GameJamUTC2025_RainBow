@@ -38,7 +38,7 @@ public class ColorBulletSpawner : Spawner
     protected override void Start()
     {
         base.Start();
-        //this.LoadPrefabs();
+        this.LoadPrefabs();
         this.BuildBulletDictionary();
     }
 

@@ -90,6 +90,9 @@ public class DragAndDrop : ImpBehaviour
                         this.draggedPets[i].transform.SetParent(_targetDrop.transform);
                         this.draggedPets[i].transform.position = _targetDrop.transform.position + i * this.cellColorCtrl.GetColorDeviation;
                     }
+
+                    AudioManager.Instance.PlaySFX(AudioManager.Instance.CollectSound);
+
                     bool playMergeAnim = false;
                     if (_targetDrop.cellColorCtrl.PetColorCtrls.Count != 0) playMergeAnim = true;
 

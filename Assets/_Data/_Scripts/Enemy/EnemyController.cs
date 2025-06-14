@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     private bool isJumping = true; // Check if the enemy is already jumping
     private Animator animator;
     CloudController cloud;
+    private Collider2D col;
 
     private bool isStoppedBySun = false;
     public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
     }
     
     void Update()
@@ -83,9 +85,11 @@ public class EnemyController : MonoBehaviour
     }
     public void MoveTo(Vector3 targetPos)
     {
+        col.enabled = false;
         transform.DOMove(targetPos, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
         {
             PlayIdleLoop();
+            col.enabled = true;
         });
     }
     private void PlayIdleLoop()
