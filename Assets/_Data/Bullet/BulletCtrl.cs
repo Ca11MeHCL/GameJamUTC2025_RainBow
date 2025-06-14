@@ -60,6 +60,7 @@ public class BulletCtrl : ImpBehaviour
                 {
                     col.enabled = true;
                     // Sau khi đáp xuống điểm target → dùng rigidbody để bay ngang
+                    this.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
                     rb.velocity = Vector3.right * bulletSpeed;
                 });
             }
