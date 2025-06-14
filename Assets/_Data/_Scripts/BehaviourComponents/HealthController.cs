@@ -71,7 +71,8 @@ public class HealthController : MonoBehaviour
             Debug.Log($"{gameObject.name} - Enemy die");
            EnemyController e = gameObject.GetComponent<EnemyController>();
             e.PlayDieVFX();
-            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position,e.Score,e.Energy));
+            Vector3 offset = new Vector3 (0, -0.5f, 0);
+            MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position + offset,e.Score,e.Energy));
         }
         
        

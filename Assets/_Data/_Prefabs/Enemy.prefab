@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7566525845472255278}
   - component: {fileID: 2666387564576276756}
   - component: {fileID: 4119924762993410542}
-  - component: {fileID: -3372355159248124085}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -114,7 +113,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026876688, y: 0.47034052}
+  m_Offset: {x: 0.06, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.52380955, y: -0.08}
@@ -125,7 +124,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.784987, y: 0.88865405}
+  m_Size: {x: 0.53, y: 0.63}
   m_EdgeRadius: 0
 --- !u!212 &7566525845472255278
 SpriteRenderer:
@@ -204,7 +203,7 @@ Animator:
   m_GameObject: {fileID: 4456426293675873856}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -8319921865764511388, guid: d03b9438e752edf49b615fe2ad33dbf9, type: 3}
+  m_Controller: {fileID: 9100000, guid: eaf75efb628762749990884f63b274ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -215,17 +214,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3372355159248124085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4456426293675873856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7651cb539c893e54ea87f0ac8ac2f162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
-  target: 1

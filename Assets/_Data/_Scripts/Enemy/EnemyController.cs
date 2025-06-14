@@ -136,8 +136,6 @@ public class EnemyController : MonoBehaviour
         if (animator != null)
         {
             animator.Play("Die");
-            Debug.Log("bat coroutine die");
-            // Wait until the "Die" animation finishes
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         }
         Destroy(gameObject);

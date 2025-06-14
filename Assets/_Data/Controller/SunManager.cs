@@ -83,7 +83,7 @@ public class SunManager : ImpBehaviour
 
             lastSunActivationTimes[enemyY] = Time.time;
 
-            Vector3 targetPosition = new Vector3(-9.2f, enemy.transform.position.y + 0.45f, 0f);
+            Vector3 targetPosition = new Vector3(-9.2f, enemy.transform.position.y, 0f);
 
             if (sunControllers.Count > 0)
             {
