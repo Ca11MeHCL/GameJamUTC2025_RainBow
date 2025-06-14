@@ -21,18 +21,16 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     CloudController cloud;
 
-    #region MonoBehaviour
+    private bool isStoppedBySun = false;
+    public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
+
+    #region MonoBehaviour 
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
     
-    private bool isStoppedBySun = false;
-    public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
-
-    #region MonoBehaviour 
-
     void Update()
         {
             transform.position += speed * Time.deltaTime * Vector3.left;
@@ -44,7 +42,7 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Cloud"))
         {
             speed = 0.5f;
-            cloud = other.GetComponentInChildren<CloudController>();
+
             cloud = other.GetComponentInChildren<CloudController>();
             if (cloud != null && cloud.currentHP > 0)
             {
@@ -76,6 +74,7 @@ public class EnemyController : MonoBehaviour
     }*/
 
     #endregion
+
     #region Public Methods
 
     public void PlaySpawnAnimation()
@@ -102,6 +101,7 @@ public class EnemyController : MonoBehaviour
       
     }
     #endregion
+
     #region Private Methods
 
     private void checkOutScreen()
