@@ -5,26 +5,27 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventListener<EEndLevel>
 {
-    public static LevelManager Instance { get; private set; } // Singleton instance
+    public static LevelManager Instance { get; private set; }
 
-    public List<LevelData> levels; // Danh sách level hiện tại
-    public List<GameObject> enemyPrefabsMasterList; // Danh sách enemy gốc (cố định theo thứ tự)
+    public List<LevelData> levels;
+    public List<GameObject> enemyPrefabsMasterList;
 
     public int currentLevelIndex = 0;
-    private int currentEnemyTypeIndex = 0; // Đánh dấu đã dùng đến loại enemy nào
+    private int currentEnemyTypeIndex = 0;
     private int defeatedEnemies = 0;
+
     public LevelData CurrentLevel => levels[currentLevelIndex];
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            Destroy(gameObject);
             return;
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Persist across scenes
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -64,28 +65,34 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
     public void GoToNextLevel()
     {
         defeatedEnemies = 0;
+
+        // Nếu level tiếp theo chưa có, tạo mới trước
+        if (currentLevelIndex + 1 >= levels.Count)
+        {
+            Debug.Log($"Chuẩn bị tạo level mới tại vị trí {levels.Count}");
+            CreateNewLevel();
+        }
+
         currentLevelIndex++;
 
         if (currentLevelIndex >= levels.Count)
         {
-            Debug.Log("Đã tới level cuối cùng: " + currentLevelIndex);
+            Debug.Log("Đã tới level cuối cùng: " + (currentLevelIndex + 1));
             return;
         }
 
-        Debug.Log($"Chuyển sang level {currentLevelIndex + 1}");
-        CreateNewLevel();
+        Debug.Log($"Chuyển sang Level {currentLevelIndex + 1}");
+        DataManager.Instance.LevelId = currentLevelIndex + 1;
     }
+
 
     private void CreateNewLevel()
     {
         LevelData previousLevel = levels[currentLevelIndex];
         LevelData nextLevel = ScriptableObject.CreateInstance<LevelData>();
 
-        // Giữ nguyên các hàng spawn
         nextLevel.rowPositions = new List<float>(previousLevel.rowPositions);
         nextLevel.spawnInterval = Mathf.Max(0.3f, previousLevel.spawnInterval - 0.1f);
-
-        // Copy lại enemy cũ và tăng số lượng mỗi loại
         nextLevel.enemiesToSpawn = new List<EnemySpawnInfo>();
 
         foreach (var enemyInfo in previousLevel.enemiesToSpawn)
@@ -97,7 +104,6 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
             });
         }
 
-        // Thêm enemy mới theo thứ tự master list
         if (currentEnemyTypeIndex < enemyPrefabsMasterList.Count)
         {
             GameObject nextEnemy = enemyPrefabsMasterList[currentEnemyTypeIndex];
@@ -111,7 +117,7 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
                     spawnCount = 2
                 });
 
-                currentEnemyTypeIndex++; // tăng index cho lần sau
+                currentEnemyTypeIndex++;
             }
         }
 
@@ -120,17 +126,20 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
 
     public void RestartLevel()
     {
-        // Không reset currentLevelIndex
+        defeatedEnemies = 0;
     }
 
     public void Reset()
     {
         currentLevelIndex = 0;
         currentEnemyTypeIndex = 0;
+        defeatedEnemies = 0;
     }
 
     public void OnMMEvent(EEndLevel eventType)
     {
+        Debug.Log("Finish lelvel "+ (currentLevelIndex + 1));
+        DataManager.Instance.LevelId = currentLevelIndex + 1;
         GoToNextLevel();
     }
 }

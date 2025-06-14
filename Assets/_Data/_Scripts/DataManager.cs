@@ -33,7 +33,6 @@ public class DataManager : MonoBehaviour,MMEventListener<EEnemyDie>,MMEventListe
         {
             levelId = value;
             MMEventManager.TriggerEvent(new EDataChanged());
-            Debug.Log($"Level ID updated: {levelId}");
         }
     }
 
@@ -68,11 +67,10 @@ public class DataManager : MonoBehaviour,MMEventListener<EEnemyDie>,MMEventListe
     public void OnMMEvent(EEnemyDie eventType)
     {
         Score += eventType.score;
-      Debug.Log($"Score updated: {eventType.score}");
     }
 
     public void OnMMEvent(EEndLevel eventType)
     {
-        LevelId = LevelManager.Instance.currentLevelIndex;
+        Debug.Log("DataManager: Level ended");
     }
 }
