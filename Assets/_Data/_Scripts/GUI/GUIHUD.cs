@@ -6,7 +6,7 @@ using UnityEngine;
 public class GUIHUD : GUIBase,MMEventListener<EDataChanged>
 {
     [SerializeField] private TextMeshProUGUI scoreText;
-
+    [SerializeField] private TextMeshProUGUI levelText;
     private void Awake()
     {
         if (scoreText == null)
@@ -18,22 +18,26 @@ public class GUIHUD : GUIBase,MMEventListener<EDataChanged>
     private void OnEnable()
     {
         this.MMEventStartListening<EDataChanged>();
+        
     }
     private void OnDisable()
     {
         this.MMEventStopListening<EDataChanged>();
     }
 
-    public void UpdateScore(int score)
+    public void UpdateScore()
     {
         if (scoreText != null)
         {
-            scoreText.text = $"Score: {score}";
+            scoreText.text = $"Score: {DataManager.Instance.Score}";
+        }
+        if(levelText != null){
+            levelText.text = $"Level {DataManager.Instance.LevelId}";
         }
     }
 
     public void OnMMEvent(EDataChanged eventType)
     {
-        UpdateScore(DataManager.Instance.Score);
+        UpdateScore();
     }
 }

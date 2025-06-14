@@ -15,7 +15,7 @@ public class EnergyController : MonoBehaviour
 
     private IEnumerator PlayIdle()
     {
-        yield return new WaitForSeconds(2f); // Đợi 2 giây trước khi bắt đầu di chuyển
+        yield return new WaitForSeconds(1f); // Đợi 1 giây trước khi bắt đầu di chuyển
         MoveToTarget();
     }
 

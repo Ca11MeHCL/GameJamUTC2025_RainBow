@@ -58,11 +58,11 @@ public class HealthController : MonoBehaviour
         {
             Debug.Log($"{gameObject.name} - Enemy die");
            EnemyController e = gameObject.GetComponent<EnemyController>();
-            //e.PlayDieVFX();
+            e.PlayDieVFX();
             MMEventManager.TriggerEvent(new EEnemyDie(gameObject.transform.position,e.Score,e.Energy));
         }
         
-        Destroy(gameObject);
+       
     }
 
     // Method to get current health

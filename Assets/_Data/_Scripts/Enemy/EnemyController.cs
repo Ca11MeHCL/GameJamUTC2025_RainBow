@@ -73,10 +73,8 @@ public class EnemyController : MonoBehaviour
     }
     public void PlayDieVFX()
     {
-        if (animator != null)
-        {
-            animator.Play("Die");
-        }
+        StartCoroutine(PlayDieVFXCoroutine());
+      
     }
     #endregion
     #region Private Methods
@@ -103,6 +101,17 @@ public class EnemyController : MonoBehaviour
 
         // Sau đó chuyển sang "Idle"
         animator.Play("Idle");
+    }
+    private IEnumerator PlayDieVFXCoroutine()
+    {
+        if (animator != null)
+        {
+            animator.Play("Die");
+            Debug.Log("bat coroutine die");
+            // Wait until the "Die" animation finishes
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        }
+        Destroy(gameObject);
     }
     #endregion
     

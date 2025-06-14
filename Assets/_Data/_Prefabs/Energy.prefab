@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9c7096b24645d419b28194f0380bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeMove: 1
+  targetPosition: {x: 7.51, y: -3.98, z: 0}
   moveDuration: 0.5

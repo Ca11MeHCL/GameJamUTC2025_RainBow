@@ -112,7 +112,7 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
         Vector3 targetPosition = new Vector3(x, y, 0);
 
         GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
-
+        AudioManager.Instance.PlayPopSound();
         var enemyCtrl = enemy.GetComponent<EnemyController>();
         if (enemyCtrl != null)
         {

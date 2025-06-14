@@ -1,19 +1,69 @@
 using System.Collections.Generic;
+using System.Linq;
 using MoreMountains.Tools;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventListener<EEndLevel>
 {
+    public static LevelManager Instance { get; private set; } // Singleton instance
+
     public List<LevelData> levels; // Danh sách level hiện tại
     public List<GameObject> enemyPrefabsMasterList; // Danh sách enemy gốc (cố định theo thứ tự)
 
     public int currentLevelIndex = 0;
     private int currentEnemyTypeIndex = 0; // Đánh dấu đã dùng đến loại enemy nào
-
+    private int defeatedEnemies = 0;
     public LevelData CurrentLevel => levels[currentLevelIndex];
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instances
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // Persist across scenes
+    }
+
+    private void Start()
+    {
+        defeatedEnemies = 0;
+        this.MMEventStartListening<EEnemyDie>();
+        this.MMEventStartListening<EEndLevel>();
+    }
+
+    private void OnDestroy()
+    {
+        this.MMEventStopListening<EEnemyDie>();
+        this.MMEventStopListening<EEndLevel>();
+    }
+
+    public void OnMMEvent(EEnemyDie eventType)
+    {
+        defeatedEnemies++;
+        CheckLevelCompletion();
+    }
+
+    private void CheckLevelCompletion()
+    {
+        int totalEnemies = CurrentLevel.enemiesToSpawn.Sum(e => e.spawnCount);
+        if (defeatedEnemies >= totalEnemies)
+        {
+            LevelComplete();
+        }
+    }
+
+    private void LevelComplete()
+    {
+        Debug.Log("Level Complete!");
+        MMEventManager.TriggerEvent(new EEndLevel());
+    }
 
     public void GoToNextLevel()
     {
+        defeatedEnemies = 0;
         currentLevelIndex++;
 
         if (currentLevelIndex >= levels.Count)
@@ -79,8 +129,8 @@ public class LevelManager : MonoBehaviour
         currentEnemyTypeIndex = 0;
     }
 
-    public void TriggerEvents()
+    public void OnMMEvent(EEndLevel eventType)
     {
-        MMEventManager.TriggerEvent(new EEndLevel());
+        GoToNextLevel();
     }
 }
