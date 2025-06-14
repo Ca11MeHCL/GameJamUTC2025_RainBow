@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip AttackSound;
     public AudioClip CollectEnergySound;
     public AudioClip ButtonClickSound;
+    //public AudioClip SpawnColor;
 
     private bool isMute = false; // Track mute state
     private void Awake()

@@ -39,6 +39,7 @@ public class ColorSpawnerRandom : ImpBehaviour
 
         Transform prefab = this.colorSpawnCtrl.ColorSpawner.RandomPrefab();
         Transform obj = this.colorSpawnCtrl.ColorSpawner.Spawn(prefab, pos, rot);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SpawnColorSound);
         obj.gameObject.SetActive(true);
         if (obj.gameObject.GetComponent<PetColorCtrl>().SpriteRenderer.sortingOrder > 10)
             obj.gameObject.GetComponent<PetColorCtrl>().SpriteRenderer.sortingOrder -= 10;

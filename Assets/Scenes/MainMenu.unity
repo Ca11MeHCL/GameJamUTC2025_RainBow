@@ -373,7 +373,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 965664985}
-  - {fileID: 794920947}
   m_Father: {fileID: 72096622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -430,9 +429,9 @@ Canvas:
   m_GameObject: {fileID: 143372665}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 565823862}
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1209,7 +1208,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4285766933652846723, guid: d40888d5c4834f24fa791fe04d39caac, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1960,12 +1959,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 143372666}
+  m_Father: {fileID: 965664985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -446.46536}
-  m_SizeDelta: {x: 1609.7732, y: 312.2551}
+  m_AnchoredPosition: {x: 0, y: -54.3}
+  m_SizeDelta: {x: 401.2, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794920948
 MonoBehaviour:
@@ -2014,8 +2013,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2101,7 +2100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273.86, y: -225.91}
+  m_AnchoredPosition: {x: -273.86, y: -149.58}
   m_SizeDelta: {x: 1424.28, y: 551.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925929123
@@ -2185,12 +2184,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 171215035}
+  - {fileID: 794920947}
   m_Father: {fileID: 143372666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 241}
-  m_SizeDelta: {x: 1545.1501, y: 299.0691}
+  m_AnchoredPosition: {x: 0, y: 150}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965664986
 MonoBehaviour:
@@ -3207,11 +3207,11 @@ MonoBehaviour:
   musicSource: {fileID: 465773731}
   sfxSource: {fileID: 2140469033}
   MusicSound: {fileID: 8300000, guid: f4041bde6793f3e4799f19e20c09b5ca, type: 3}
-  PopSound: {fileID: 8300000, guid: 6eda4ee8e4a295743948c50fbfab7cb1, type: 3}
+  PopSound: {fileID: 8300000, guid: c60e007251637bd4b9f8a0a441fe64ba, type: 3}
   CollectSound: {fileID: 8300000, guid: 555a149c78476694e97f2fa6b162b7ad, type: 3}
   SpawnColorSound: {fileID: 8300000, guid: 41739d73823d97842aa2af750dea8515, type: 3}
-  AttackSound: {fileID: 8300000, guid: fdf93fb7aca752d48b42d6dfa3282871, type: 3}
-  CollectEnergySound: {fileID: 8300000, guid: c60e007251637bd4b9f8a0a441fe64ba, type: 3}
+  AttackSound: {fileID: 8300000, guid: 996b124c3ee5779448aa824e5eb5b4ad, type: 3}
+  CollectEnergySound: {fileID: 8300000, guid: f380eacdd1a48c24e9e9c58a2d211e06, type: 3}
   ButtonClickSound: {fileID: 8300000, guid: 3da0d0ecb7af0464a835b41073b1eafe, type: 3}
 --- !u!4 &1589683094
 Transform:
@@ -3894,7 +3894,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1940686724
 RectTransform:
@@ -4180,7 +4180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5694223185419007518, guid: d40888d5c4834f24fa791fe04d39caac, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.06
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
