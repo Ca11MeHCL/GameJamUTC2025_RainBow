@@ -66,19 +66,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (isStoppedBySun) return;
-    //    if (collision.CompareTag("Cloud"))
-    //    {
-    //        if (cloud != null && cloud.currentHP == 0)
-    //        {
-    //            speed = 2f;
-    //            animator.Play("Idle");
-    //        }
-    //    }
-    //}
-
+  
     #endregion
 
     #region Public Methods

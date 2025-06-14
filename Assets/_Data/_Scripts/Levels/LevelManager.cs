@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
     private void CheckLevelCompletion()
     {
         int totalEnemies = CurrentLevel.enemiesToSpawn.Sum(e => e.spawnCount);
+        Debug.Log("totalEnemies: " + totalEnemies + ", defeatedEnemies: " + defeatedEnemies);
         if (defeatedEnemies >= totalEnemies)
         {
             LevelComplete();

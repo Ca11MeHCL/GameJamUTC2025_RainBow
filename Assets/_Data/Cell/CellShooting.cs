@@ -9,7 +9,7 @@ public class CellShooting : ImpBehaviour
     public CellColorCtrl CellColorCtrl { get => cellColorCtrl; }
 
     [SerializeField] protected int bulletNumber = 1;
-    [SerializeField] protected float shootingSpeed = 1f;
+    [SerializeField] protected float shootingSpeed = 2f;
 
     private bool _isShooting = false;
 
