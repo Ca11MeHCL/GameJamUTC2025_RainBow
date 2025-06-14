@@ -71,6 +71,7 @@ public class SceneController : ImpBehaviour
     public void LoadScene(int index)
     {
         SceneManager.LoadSceneAsync(index);
+        Time.timeScale = 1;
     }
 
     public int GetActiveSceneIndex()

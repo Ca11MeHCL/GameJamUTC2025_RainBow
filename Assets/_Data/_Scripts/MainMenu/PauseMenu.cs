@@ -28,7 +28,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-
-
-
+    private void FixedUpdate()
+    {
+        Debug.Log(Time.timeScale);
+    }
 }

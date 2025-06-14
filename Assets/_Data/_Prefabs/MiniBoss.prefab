@@ -10,35 +10,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Size.x
-      value: 0.9754096
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Size.y
-      value: 2.0331712
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Offset.x
-      value: 0.00157094
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Offset.y
-      value: 1.5786812
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.35555556
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: -0.27419356
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.40625
+      value: 3.125
       objectReference: {fileID: 0}
     - target: {fileID: 493119773271802215, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.9375
+      value: 3.125
       objectReference: {fileID: 0}
     - target: {fileID: 1380207376157043787, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_LocalScale.x
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 4119924762993410542, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: -1526789922454627813, guid: 065acd74252f0de48909eec9fd3484cc, type: 3}
+      objectReference: {fileID: 9100000, guid: 996df2daf6b0402488d69f374fd827ea, type: 2}
     - target: {fileID: 4456426293675873856, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Name
       value: MiniBoss
@@ -91,7 +91,11 @@ PrefabInstance:
     - target: {fileID: 7566525845472255278, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2695632755282537288, guid: 065acd74252f0de48909eec9fd3484cc, type: 3}
+      objectReference: {fileID: -1345224491, guid: 8bb4ec1af6845c34ca8697e06b02a9fb, type: 3}
+    - target: {fileID: 7566525845472255278, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8219781636447804741, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
