@@ -66,8 +66,8 @@ public class CellShooting : ImpBehaviour
 
     protected virtual bool CheckHasEnemy()
     {
-        float rowY = transform.position.y;
-        float startX = transform.position.x;
+        float rowY = transform.position.y + 0.4f;
+        float startX = transform.position.x + 0.5f;
         float endX = 15f;
 
         // Tính center và size của vùng quét

@@ -32,4 +32,21 @@ public class ColorSpawnPointsCtrl : SpawnPoints
             _cell.LoadPetColorCtrl();
         }
     }
+
+    public void LoadActiveCellColorCtrls()
+    {
+        this.cellColorCtrls.Clear();
+        foreach (Transform _point in transform)
+        {
+            if (!_point.gameObject.activeInHierarchy) continue;
+
+            CellColorCtrl _cell = _point.GetComponent<CellColorCtrl>();
+            if (_cell != null)
+            {
+                this.cellColorCtrls.Add(_cell);
+            }
+        }
+
+        //Debug.Log(transform.name + ": LoadActiveCellColorCtrls", gameObject);
+    }
 }
