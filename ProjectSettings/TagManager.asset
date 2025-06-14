@@ -9,6 +9,7 @@ TagManager:
   - Attack
   - Bullet
   - Color
+  - Destroy
   layers:
   - Default
   - TransparentFX

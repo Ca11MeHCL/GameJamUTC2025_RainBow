@@ -14,7 +14,14 @@ public class HealthController : MonoBehaviour
         Cloud,
         Enemy
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Destroy"))
+        {
+            this.Die();
+        }
+    }
 
     private void Start()
     {

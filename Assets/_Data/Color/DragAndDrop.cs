@@ -50,6 +50,7 @@ public class DragAndDrop : ImpBehaviour
 
     private void OnMouseUp()
     {
+        if (this.draggedPets.Count == 0) return;
         this._dragging = false;
         this.CheckDropLocation();
 
@@ -111,7 +112,7 @@ public class DragAndDrop : ImpBehaviour
                 GameObject obj = t.gameObject;
 
                 float rotateDuration = 0.3f;
-                float shrinkDuration = 0.6f;
+                float shrinkDuration = 0.5f;
 
                 // Tính góc xoay ngẫu nhiên
                 float angle = Random.Range(0f, 30f);

@@ -12,6 +12,11 @@ public class CloudController : ImpBehaviour
     [SerializeField] protected Collider2D col;
     public Collider2D Collider2D { get => col; }
 
+    [SerializeField] protected ColorSpawnPointsCtrl colorSpawnPointsCtrl;
+    public ColorSpawnPointsCtrl ColorSpawnPointsCtrl { get => colorSpawnPointsCtrl; }
+
+    [SerializeField] protected CellColorCtrl cellColorCtrl;
+
     [Header("Flash Settings")]
     public float flashTime = 0f;
     public float flashDuration = 3f;
@@ -27,15 +32,17 @@ public class CloudController : ImpBehaviour
 
     protected Vector3 initialScale;
     protected Coroutine flashRoutine;
-    protected HashSet<Collider2D> enemiesInside = new HashSet<Collider2D>();        // Trạng thái đang nhấp nháy
+    protected HashSet<Collider2D> enemiesInside = new HashSet<Collider2D>();
 
-    public bool isEnable = true;
+    //public bool isEnable = true;
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadSpriteRenderer();
         this.LoadCollider2D();
+        this.LoadColorSpawnPointsCtrl();
+        this.LoadCellColorCtrl();
     }
 
     protected virtual void LoadSpriteRenderer()
@@ -50,6 +57,27 @@ public class CloudController : ImpBehaviour
         if (this.col != null) return;
         this.col = GetComponent<Collider2D>();
         Debug.Log(transform.name + ": LoadCollider2D", gameObject);
+    }
+
+    protected virtual void LoadColorSpawnPointsCtrl()
+    {
+        if (this.colorSpawnPointsCtrl != null) return;
+        this.colorSpawnPointsCtrl = GameObject.Find("ColorSpawnPoints").GetComponent<ColorSpawnPointsCtrl>();
+        Debug.Log(transform.name + ": LoadColorSpawnPointsCtrl", gameObject);
+    }
+
+    protected virtual void LoadCellColorCtrl()
+    {
+        if (this.cellColorCtrl != null) return;
+        foreach (CellColorCtrl c in this.colorSpawnPointsCtrl.CellColorCtrls)
+        {
+            if (c.gameObject.name == this.transform.parent.gameObject.name)
+            {
+                this.cellColorCtrl = c;
+                break;
+            }
+        }
+        Debug.Log(transform.name + ": LoadCellColorCtrl", gameObject);
     }
 
     protected override void Start()
@@ -80,11 +108,18 @@ public class CloudController : ImpBehaviour
         }
     }
 
+    private void CleanInvalidEnemies()
+    {
+        enemiesInside.RemoveWhere(enemy => enemy == null || !enemy.gameObject.activeInHierarchy);
+    }
+
     protected IEnumerator DamageRoutine()
     {
         while (true)
         {
-            if (isEnable && enemiesInside.Count > 0 && !isFlashing)
+            CleanInvalidEnemies();
+
+            if (enemiesInside.Count > 0 && !isFlashing)
             {
                 currentHP -= 1;
                 currentHP = Mathf.Max(0, currentHP);
@@ -164,7 +199,10 @@ public class CloudController : ImpBehaviour
         spriteRenderer.enabled = false;
         col.enabled = false;
 
-        isEnable = false; // ❗Đặt ở đây: sau khi đối tượng đã hoàn toàn biến mất khỏi màn hình và không còn va chạm
+        enemiesInside.Clear();
+
+        //isEnable = false;
+        this.DisableCell();
 
         // Đợi trước khi hồi sinh
         yield return new WaitForSeconds(3f);
@@ -175,7 +213,6 @@ public class CloudController : ImpBehaviour
         isFlashing = false;
 
         spriteRenderer.enabled = true;
-        col.enabled = true;
 
         SetAlpha(0f);
         transform.parent.localScale = Vector3.zero;
@@ -184,8 +221,10 @@ public class CloudController : ImpBehaviour
         spriteRenderer.DOFade(1f, 0.5f);
         yield return transform.parent.DOScale(initialScale, 0.5f).SetEase(Ease.OutBack).WaitForCompletion();
 
+        col.enabled = true;
         SetAlpha(1f);
-        isEnable = true; // ✅ Đặt lại thành true sau khi hiện ra
+        //isEnable = true;
+        this.EnableCell();
 
         // Khởi động lại DamageRoutine
         StartCoroutine(DamageRoutine());
@@ -197,5 +236,69 @@ public class CloudController : ImpBehaviour
         Color c = spriteRenderer.color;
         c.a = a;
         spriteRenderer.color = c;
+    }
+    protected virtual void EnableCell()
+    {
+        this.cellColorCtrl.gameObject.SetActive(true);
+        this.colorSpawnPointsCtrl.LoadActiveCellColorCtrls();
+    }
+
+    protected virtual void DisableCell()
+    {
+        if (this.cellColorCtrl.PetColorCtrls.Count == 0)
+        {
+            StartCoroutine(WaitForDespawn(0f));
+            return;
+        }
+
+        Vector3 pivot = this.cellColorCtrl.PetColorCtrls[0].transform.position;
+        float rotateDuration = 0.3f;
+        float shrinkDuration = 0.5f;
+        for (int i = 0; i < this.cellColorCtrl.PetColorCtrls.Count; i++)
+        {
+            Transform t = this.cellColorCtrl.PetColorCtrls[i].transform;
+            GameObject obj = t.gameObject;
+
+            // Tính góc xoay ngẫu nhiên
+            float angle = Random.Range(0f, 30f);
+            angle *= (i % 2 == 0) ? -1f : 1f;
+
+            // Tính vị trí sau khi quay quanh pivot
+            Vector3 dir = t.position - pivot;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Vector3 rotatedPos = pivot + rotation * dir;
+
+            // Sequence: Di chuyển → Xoay → Thu nhỏ → Despawn
+            Sequence seq = DOTween.Sequence();
+
+            // Di chuyển đến vị trí xoay quanh pivot
+            seq.Append(t.DOMove(rotatedPos, rotateDuration).SetEase(Ease.OutQuad));
+
+            // Xoay theo trục Z
+            seq.Join(t.DORotate(
+                new Vector3(0, 0, t.eulerAngles.z + angle),
+                rotateDuration,
+                RotateMode.Fast
+            ).SetEase(Ease.OutQuad));
+
+            // Thu nhỏ sau khi quay xong
+            seq.Append(t.DOScale(Vector3.zero, shrinkDuration).SetEase(Ease.InQuad));
+
+            // Gọi despawn khi xong hiệu ứng
+            seq.OnComplete(() => {
+                ColorSpawner.Instance.Despawn(t);
+                this.cellColorCtrl.LoadPetColorCtrl();
+            });
+            //ColorSpawner.Instance.Despawn(this.draggedPets[i].transform);
+        }
+
+        StartCoroutine(WaitForDespawn(rotateDuration + shrinkDuration));
+    }
+
+    private IEnumerator WaitForDespawn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        this.cellColorCtrl.gameObject.SetActive(false);
+        this.colorSpawnPointsCtrl.LoadActiveCellColorCtrls();
     }
 }

@@ -6,10 +6,15 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float speed = 2.0f; // Movement speed
+    public float Speed {  get { return speed; } set { speed = value; } }
+
     [SerializeField] private float jumpHeight = 2.0f; // Maximum height of the jump
     [SerializeField] private float jumpDuration = 0.5f; // Time it takes to complete the jump
     private bool isJumping = true; // Check if the enemy is already jumping
     CloudController cloud;
+
+    private bool isStoppedBySun = false;
+    public bool IsStoppedBySun { get { return isStoppedBySun; } set { isStoppedBySun = value; } }
 
     #region MonoBehaviour 
 
@@ -21,19 +26,35 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.CompareTag("Cloud") || other.CompareTag("Enemy"))
         if (other.CompareTag("Cloud"))
         {
-            speed = 0f;
             cloud = other.GetComponentInChildren<CloudController>();
+            if (cloud != null && cloud.currentHP > 0)
+            {
+                speed = 0f;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (isStoppedBySun) return;
+        if (other.CompareTag("Cloud"))
+        {
+            speed = 2f;
+            cloud = null;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Cloud"))
+        if (isStoppedBySun) return;
+        if (collision.CompareTag("Cloud"))
         {
-            if (cloud.currentHP == 0) this.speed = 2f;
+            if (cloud != null && cloud.currentHP == 0)
+            {
+                speed = 2f;
+            }
         }
     }
 
