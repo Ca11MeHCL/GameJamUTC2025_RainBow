@@ -111,7 +111,8 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
         float y = spawnedEnemyPositions[0];
         Vector3 targetPosition = new Vector3(x, y, 0);
 
-        GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
+        //GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
+        GameObject enemy = PoolManager.Instance.SpawnFromPool(PoolManager.TagType.enemy, spawnPosition, Quaternion.identity);
         AudioManager.Instance.PlayPopSound();
         var enemyCtrl = enemy.GetComponent<EnemyController>();
         if (enemyCtrl != null)
