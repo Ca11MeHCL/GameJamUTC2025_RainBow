@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7b8abdd8-2ad3-4534-9836-cbd76e523992" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/AudioMixer.mixer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/AudioMixer.mixer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/Yoshi's Island OST - Flower Garden.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/Yoshi's Island OST - Flower Garden.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/attack.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/attack.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/click-3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/click-3.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/collect-points-190037.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/collect-points-190037.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/collect.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/collect.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/pop-cartoon-328167.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/pop-cartoon-328167.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/pop_1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/pop_1.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/punch-2-37333 (mp3cut.net).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/punch-2-37333 (mp3cut.net).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/punch-2-37333.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/punch-2-37333.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sfx_collect_coin_02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sfx_collect_coin_02.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sfx_collect_coin_02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sfx_collect_coin_02.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sharp-pop-328170.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/sharp-pop-328170.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/spawn color.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Audios/audios/spawn color.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Banner02a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Banner02a.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Banner03a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Banner03a.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button02a_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_IconCross01c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_IconCross01c.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_InputField01a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_InputField01a.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/License.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/Thank You for Purchasing!.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/Complete_UI_Essential_Pack_Free/Thank You for Purchasing!.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/BulletImpact_7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/null.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/FX/BulletImpact/null.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/SkyCloudSpritesheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/SkyCloudSpritesheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-cat-poptart-cat (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-cat-poptart-cat (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-cat-poptart-cat (1)_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-cat-poptart-cat (1)_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-catAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/SelectLevel/nyan-catAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/23.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/24.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/25.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/26.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/Free Preview 1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 1/Free Preview 1.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/464.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/465.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/465.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/466.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/467.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/467.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/474.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/474.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/475.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/475.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/476.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/477.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/477.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/484.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/484.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/485.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/485.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/486.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/486.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/487.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/487.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/Preview Free 10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 10/Preview Free 10.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/506.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/507.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/507.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/508.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/508.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/509.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/509.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/516.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/517.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/517.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/518.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/518.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/519.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/519.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/526.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/526.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/527.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/527.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/528.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/528.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/529.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/529.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/Preview Free 11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 11/Preview Free 11.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/566.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/566.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/567.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/567.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/568.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/568.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/569.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/569.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/576.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/576.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/577.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/577.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/578.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/578.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/579.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/579.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/586.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/586.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/587.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/587.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/588.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/588.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/589.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/589.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/Preview Free 12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 12/Preview Free 12.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/612.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/612.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/613.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/613.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/614.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/614.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/615.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/615.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/622.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/622.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/623.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/623.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/624.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/624.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/625.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/625.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/632.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/632.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/633.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/633.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/634.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/634.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/635.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/635.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/Free Preview 13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 13/Free Preview 13.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/652.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/652.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/653.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/653.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/654.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/654.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/655.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/655.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/662.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/662.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/663.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/663.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/664.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/664.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/665.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/665.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/672.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/672.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/673.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/673.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/674.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/674.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/675.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/675.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/Free Preview 14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 14/Free Preview 14.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/700.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/701.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/701.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/702.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/702.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/703.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/703.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/710.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/710.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/711.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/711.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/712.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/712.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/713.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/713.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/720.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/720.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/721.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/721.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/722.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/722.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/723.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/723.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/Free Preview 15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 15/Free Preview 15.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/62.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/63.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/64.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/65.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/69.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/70.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/71.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/72.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/76.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/77.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/78.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/79.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/Preview Free 2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 2/Preview Free 2.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/113.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/114.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/115.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/116.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/123.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/124.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/124.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/125.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/126.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/133.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/134.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/135.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/136.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/Preview Free 3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 3/Preview Free 3.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/174.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/175.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/176.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/177.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/184.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/184.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/185.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/186.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/187.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/194.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/195.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/195.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/196.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/197.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/197.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/Preview Free 4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 4/Preview Free 4.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/220.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/220.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/221.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/221.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/222.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/223.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/230.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/231.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/232.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/232.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/233.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/233.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/240.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/241.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/242.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/242.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/243.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/243.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/Preview Free 5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 5/Preview Free 5.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/273.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/273.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/274.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/274.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/275.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/275.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/276.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/283.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/284.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/284.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/285.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/285.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/286.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/286.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/293.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/293.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/294.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/294.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/295.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/295.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/296.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/Preview Free 6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 6/Preview Free 6.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/313.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/314.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/314.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/315.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/315.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/316.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/323.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/323.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/324.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/324.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/325.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/325.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/326.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/333.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/334.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/334.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/335.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/335.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/336.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/336.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/Preview Free 7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 7/Preview Free 7.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/375.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/375.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/376.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/376.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/377.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/377.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/378.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/385.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/385.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/386.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/386.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/387.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/387.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/388.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/388.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/395.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/395.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/396.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/397.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/397.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/398.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/398.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/Preview Free 8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 8/Preview Free 8.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/426.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/426.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/427.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/427.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/428.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/429.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/429.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/436.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/436.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/437.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/437.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/438.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/438.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/439.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/439.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/446.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/446.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/447.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/447.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/448.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/448.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/449.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/449.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/Preview Free 9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Asset/VFX/Part 9/Preview Free 9.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/BulletImpact.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/BulletImpact/BulletImpactAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/BulletImpact/BulletImpactAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/BulletImpact/Impact.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/BulletImpact/Impact.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Cloud.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Cloud/CloudAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Cloud/CloudAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Cloud/Loop.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Cloud/Loop.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Color.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Color/Merge.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Color/Merge.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Attack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Attack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/BigGhostAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/BigGhostAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Die.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Die.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Spawn.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/BigGhost/Spawn.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Die.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Die.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/MiniGhostAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/MiniGhostAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Spawn.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/Enemies/MiniGhost/Spawn.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/PlayButton.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/PlayButton.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/QuestionButton.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/QuestionButton.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/RainBow.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/RainBow.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/SettingButton.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/SettingButton.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/pixil-frame-0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/MainMenu/pixil-frame-0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/Click.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/Click.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/SpawnBtn.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/SpawnBtn.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/SpawnButtonAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Animation/SpawnButton/SpawnButtonAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletPrefabs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletPrefabs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletSpawnerCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Bullet/BulletSpawnerCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Cell.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Cell/CellColorCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Cell/CellColorCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Cell/CellShooting.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Cell/CellShooting.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Color.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Color/DragAndDrop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Color/DragAndDrop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Color/PetColorCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Color/PetColorCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/AnimationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/AnimationController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/CloudController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/CloudController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/ColorSpawnCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/ColorSpawnCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/ColorSpawnPointsCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/ColorSpawnPointsCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/EnergyManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/EnergyManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SceneController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SceneController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SunController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SunController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SunManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/SunManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/TouchCameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Controller/TouchCameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Interface.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Material/BulletMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Material/BulletMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/SpawnPoint.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorBulletSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorBulletSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorSpawnerRandom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/ColorSpawnerRandom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/FXDespawn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/FXDespawn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/FXSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/Spawner/FXSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/DeadMenuCtrl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/DeadMenuCtrl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/PlayBtn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/PlayBtn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/SpawnBtn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/UI/SpawnBtn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Cell.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Cell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Energy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/Energy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/MiniBoss.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/MiniBoss.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/MiniBoss_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Prefabs/MiniBoss_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/AudioManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/AudioManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/BackgroundController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/BackgroundController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/DataManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Scripts/DataManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/orig.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/Materials/orig.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/orig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/orig.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/orig_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Background/orig_big.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Blue.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Blue.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/DarkBlue.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/DarkBlue.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Green.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Green.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Orange.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Orange.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Purple.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Purple.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Red.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Red.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Yellow.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Color/Yellow.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Fence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Fence.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/GUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/GUI/GUI_pack2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/GUI/GUI_pack2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/GUI/style1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/GUI/style1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Grass.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Grass.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Hills_4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/PastelUIFree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/PastelUIFree.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/PlayButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/PlayButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/Setting&amp;ContactButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/Setting&amp;ContactButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/blue-sky-background-in-pixel-art-style-vector.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/blue-sky-background-in-pixel-art-style-vector.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/pixil-frame-9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/sky1layer.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/Mainmenu/sky1layer.ase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/blast02_orange.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/blast02_orange.ase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/clound.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/clound.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/MiniGhost_Idle.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/MiniGhost_Idle.ase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/MiniGhost_Idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/MiniGhost_Idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/TrashBoss.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/TrashBoss.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/enemy.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/enemy.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/main project.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/main project.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/pipe.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/enemy/pipe.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/energy.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/energy.ase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/logo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/attacking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/attacking.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/death.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/death.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/idle2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/idle2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/skill1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/skill1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonAppear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonAppear.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonDeath.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonDeath.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonIdle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/png/summonIdle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/title.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Data/_Sprites/title.ase.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50e5acd061cd4a73b7fc8eecbf07e915176600/d7/cd862fdf/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2yfIhDV6eieLGqSUvv7RZTy938K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;huong&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Standalone Player.Start Unity">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.48f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Admin\Documents\GameGhecCacThu\GameJam\RainbowGJ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Admin\Documents\GameGhecCacThu\GameJam\RainbowGJ" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.48f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Admin\Documents\GameGhecCacThu\GameJam\RainbowGJ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Admin\Documents\GameGhecCacThu\GameJam\RainbowGJ" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b8abdd8-2ad3-4534-9836-cbd76e523992" name="Changes" comment="" />
+      <created>1750219331593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750219331593</updated>
+      <workItem from="1750219333381" duration="8060000" />
+      <workItem from="1750253987181" duration="3501000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
