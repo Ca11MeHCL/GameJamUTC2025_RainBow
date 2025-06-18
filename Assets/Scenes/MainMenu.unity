@@ -1436,18 +1436,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ". M\u1EE5c ti\xEAu c\u1EE7a ng\u01B0\u1EDDi ch\u01A1i l\xE0 tri\u1EC7u
-    h\u1ED3i v\xE0 s\u1EAFp x\u1EBFp c\xE1c Colors \u0111\u1EC3 t\u1EA1o th\xE0nh
-    c\xE1c h\xE0ng ph\xF2ng th\u1EE7. Sau m\u1ED7i l\u1EA7n tri\u1EC7u h\u1ED3i,
-    s\u1ED1 gi\u1ECDt n\u01B0\u1EDBc c\u1EA7n \u0111\u1EC3 tri\u1EC7u h\u1ED3i Colors
-    s\u1EBD t\u0103ng l\xEAn. M\u1ED7i Color c\xF3 hi\u1EC7u \u1EE9ng ri\xEAng bi\u1EC7t.
-    Khi gh\xE9p c\xE1c Colors theo quy t\u1EAFc: hai Colors c\xF3 c\xF9ng n-1 m\xE0u
-    s\u1EAFc s\u1EBD t\u1EA1o th\xE0nh m\u1ED9t con m\u1EDBi v\u1EDBi n+1 m\xE0u.
-    N\u1EBFu qu\xE1i v\u1EADt v\xE0 ti\u1EBFn v\xE0ot\u1EADn c\xF9ng b\u1EA5t k\u1EF3
-    h\xE0ng n\xE0o, qu\xE1i v\u1EADt s\u1EBD b\u1ECB m\u1EB7t tr\u1EDDi t\u1EA5n
-    c\xF4ng to\xE0n b\u1ED9 1 h\xE0ng. Khi h\u1EBFt 8 m\u1EB7t tr\u1EDDi, qu\xE1i
-    v\u1EADt v\u1EABn t\u1EA5n c\xF4ng \u0111\u01B0\u1EE3c th\xEC b\u1EA1n s\u1EBD
-    thua"
+  m_text: "Thu th\u1EADp gi\u1ECDt n\u01B0\u1EDBc r\u01A1i xu\u1ED1ng t\u1EEB ma
+    qu\xE1i v\xE0 t\u1EF1 \u0111\u1ED9ng. \u0110\xE2y l\xE0 t\xE0i nguy\xEAn d\xF9ng
+    \u0111\u1EC3 t\u1EA1o ra c\xE1c m\xE0u s\u1EAFc.\nM\u1ED7i m\xE0u s\u1EAFc c\u1EA7n
+    m\u1ED9t l\u01B0\u1EE3ng gi\u1ECDt n\u01B0\u1EDBc nh\u1EA5t \u0111\u1ECBnh \u0111\u1EC3
+    \u0111\u01B0\u1EE3c tri\u1EC7u h\u1ED3i.\nK\xE9o v\xE0 th\u1EA3 m\xE0u v\xE0o
+    c\xE1c \xF4 tr\xEAn s\xE2n \u0111\u1EC3 x\xE2y d\u1EF1ng h\xE0ng ph\xF2ng th\u1EE7.\nMa
+    qu\xE1i s\u1EBD di chuy\u1EC3n t\u1EEB ph\u1EA3i sang tr\xE1i. N\u1EBFu ch\xFAng
+    ch\u1EA1m \u0111\u1EBFn m\xE9p b\xEAn tr\xE1i m\xE0n h\xECnh, b\u1EA1n s\u1EBD
+    thua m\u1ED9t l\u01B0\u1EE3t. \nKhi ti\xEAu di\u1EC7t to\xE0n b\u1ED9 ma qu\xE1i
+    trong \u0111\u1EE3t, b\u1EA1n s\u1EBD sang c\u1EA5p \u0111\u1ED9 ti\u1EBFp theo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b053a8b57d25d1347bc12672b1d7c123, type: 2}
   m_sharedMaterial: {fileID: -3209348335949498384, guid: b053a8b57d25d1347bc12672b1d7c123, type: 2}
@@ -1474,8 +1472,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

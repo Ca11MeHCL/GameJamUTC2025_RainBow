@@ -1392,7 +1392,10 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: bfdcef80e408e3c47a08cedbe73d530c, type: 2}
   - {fileID: 11400000, guid: f65141b77bd513440baf4c07bca299ce, type: 2}
-  enemyPrefabsMasterList: []
+  enemyPrefabsMasterList:
+  - {fileID: 4456426293675873856, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+  - {fileID: 3428728286828059672, guid: e7d38a1071ebd2b4fa16429f12de92e7, type: 3}
+  - {fileID: 3428728286828059672, guid: 5f89f6b4b2d86094d82463ad961e322f, type: 3}
   currentLevelIndex: 0
 --- !u!4 &169308210
 Transform:

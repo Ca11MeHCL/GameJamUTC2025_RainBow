@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
     public List<GameObject> enemyPrefabsMasterList;
 
     public int currentLevelIndex = 0;
-    private int currentEnemyTypeIndex = 0;
+    private int currentEnemyTypeIndex = 2;
     private int defeatedEnemies = 0;
 
     public LevelData CurrentLevel => levels[currentLevelIndex];
@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour, MMEventListener<EEnemyDie>, MMEventLi
         LevelData nextLevel = ScriptableObject.CreateInstance<LevelData>();
 
         nextLevel.rowPositions = new List<float>(previousLevel.rowPositions);
-        nextLevel.spawnInterval = Mathf.Max(0.3f, previousLevel.spawnInterval - 0.1f);
+        nextLevel.spawnInterval = Mathf.Max(0.3f, previousLevel.spawnInterval - 0.2f);
         nextLevel.enemiesToSpawn = new List<EnemySpawnInfo>();
 
         foreach (var enemyInfo in previousLevel.enemiesToSpawn)

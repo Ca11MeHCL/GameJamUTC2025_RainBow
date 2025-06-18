@@ -8,7 +8,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
 {
     [SerializeField] private GameObject enemyContainer;
-    [SerializeField] private float spawnInterval = 2.0f;
+    [SerializeField] private float spawnInterval = 1.0f;
 
     private List<float> spawnedEnemyPositions = new List<float>();
     [SerializeField] private LevelManager levelManager;
