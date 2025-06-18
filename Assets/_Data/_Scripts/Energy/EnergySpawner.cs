@@ -18,7 +18,8 @@ public class EnergySpawner : MonoBehaviour,MMEventListener<EEnemyDie>
     {
         for (int i = 0; i < energy; i++)
         {
-            Instantiate(energyPrefab, position, Quaternion.identity);
+            //Instantiate(energyPrefab, position, Quaternion.identity);
+            GameObject energyObject = PoolManager.Instance.SpawnFromPool(PoolManager.TagType.energy, position, Quaternion.identity);
         }
         
     }

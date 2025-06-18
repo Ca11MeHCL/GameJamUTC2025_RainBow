@@ -17,7 +17,9 @@ public class PoolManager : MonoBehaviour
     {
         enemy,
         cloud,
-        energy
+        energy,
+        miniboss1,   // thêm mới
+        miniboss2
     }
 
     [Header("Pool Settings")]

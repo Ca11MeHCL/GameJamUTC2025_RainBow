@@ -1370,6 +1370,7 @@ GameObject:
   - component: {fileID: 169308208}
   - component: {fileID: 169308213}
   - component: {fileID: 169308212}
+  - component: {fileID: 169308214}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1467,6 +1468,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   levelId: 1
+--- !u!114 &169308214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169308207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3852b1b2f2874458e40d0bfb60c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: 0
+    prefab: {fileID: 4456426293675873856, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+    size: 20
+  - tag: 0
+    prefab: {fileID: 3428728286828059672, guid: e7d38a1071ebd2b4fa16429f12de92e7, type: 3}
+    size: 20
+  - tag: 0
+    prefab: {fileID: 3428728286828059672, guid: 5f89f6b4b2d86094d82463ad961e322f, type: 3}
+    size: 20
+  - tag: 2
+    prefab: {fileID: 5704108912298735734, guid: b0d2429ad78bab148a9b94d94612ee01, type: 3}
+    size: 50
 --- !u!1 &171693138
 GameObject:
   m_ObjectHideFlags: 0
