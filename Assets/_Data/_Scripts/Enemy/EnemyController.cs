@@ -8,18 +8,19 @@ public class EnemyController : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float speed = 2.0f; // Movement speed
     public float Speed {  get { return speed; } set { speed = value; } }
+    private float originSpeed;
 
     [SerializeField] private float jumpHeight = 2.0f; // Maximum height of the jump
     [SerializeField] private float jumpDuration = 0.5f; // Time it takes to complete the jump
     
     [Header("Values Settings")]
-    [SerializeField] private int score = 100; // Score to be awarded when the enemy dies
+     private int score = 100; // Score to be awarded when the enemy dies
     public int Score => score; 
-    [SerializeField] private int energy = 1; // Energy to be awarded when the enemy dies
+    private int energy = 1; // Energy to be awarded when the enemy dies
     public int Energy => energy;
     private bool isJumping = true; // Check if the enemy is already jumping
     private Animator animator;
-    CloudController cloud;
+    private CloudController cloud;
     private Collider2D col;
 
     private bool isStoppedBySun = false;
@@ -27,10 +28,16 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private DeadMenuCtrl deadMenuCtrl;
 
+    [Header("Types")]
+    [SerializeField] private PoolManager.TagType poolTag;
+    public PoolManager.TagType PoolTag => poolTag;
+
+    
     #region MonoBehaviour 
 
     private void Awake()
     {
+        originSpeed = speed;
         animator = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
         deadMenuCtrl = GameObject.Find("PauseButton").GetComponent<DeadMenuCtrl>();
@@ -104,7 +111,9 @@ public class EnemyController : MonoBehaviour
     {
         if(transform.position.x < -10f)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Speed = originSpeed;
+            PoolManager.Instance.ReturnToPool(gameObject, poolTag);
             deadMenuCtrl.Dead();
         }
     }
@@ -132,7 +141,9 @@ public class EnemyController : MonoBehaviour
             animator.Play("Die");
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        Speed = originSpeed;
+        PoolManager.Instance.ReturnToPool(gameObject, PoolManager.TagType.enemy);
     }
     #endregion
     

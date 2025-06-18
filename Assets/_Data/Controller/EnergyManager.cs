@@ -30,7 +30,8 @@ public class EnergyManager : ImpBehaviour
         if (_instance != this)
         {
             Debug.LogWarning("Another instance of EnergyManager already exists!");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            PoolManager.Instance.ReturnToPool(gameObject, PoolManager.TagType.energy);
             return;
         }
     }

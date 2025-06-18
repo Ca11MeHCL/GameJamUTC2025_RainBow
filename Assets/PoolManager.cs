@@ -68,4 +68,16 @@ public class PoolManager : MonoBehaviour
         poolDictionary[tag].Enqueue(obj);
         return obj;
     }
+    
+    public void ReturnToPool(GameObject obj, TagType tag)
+    {
+        if (!poolDictionary.ContainsKey(tag))
+        {
+            Debug.LogWarning("Pool with tag " + tag + " doesn't exist.");
+            return;
+        }
+
+        obj.SetActive(false);
+        poolDictionary[tag].Enqueue(obj);
+    }
 }

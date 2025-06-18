@@ -8,7 +8,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
 {
     [SerializeField] private GameObject enemyContainer;
-    [SerializeField] private float spawnInterval = 1.0f;
+     private float spawnInterval = 1.0f;
 
     private List<float> spawnedEnemyPositions = new List<float>();
     [SerializeField] private LevelManager levelManager;
@@ -79,7 +79,7 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
                     yield return new WaitForSeconds(idleLength);
                 }
 
-                SpawnEnemy(enemyInfo.enemyPrefab);
+                SpawnEnemy( enemyInfo.tag);
                 yield return new WaitForSeconds(spawnInterval);
             }
         }
@@ -96,7 +96,7 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
         }
     }
 
-    private void SpawnEnemy(GameObject prefab)
+    private void SpawnEnemy(PoolManager.TagType tag)
     {
         if (spawnedEnemyPositions == null || spawnedEnemyPositions.Count == 0)
         {
@@ -111,8 +111,7 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
         float y = spawnedEnemyPositions[0];
         Vector3 targetPosition = new Vector3(x, y, 0);
 
-        //GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity, enemyContainer.transform);
-        GameObject enemy = PoolManager.Instance.SpawnFromPool(PoolManager.TagType.enemy, spawnPosition, Quaternion.identity);
+        GameObject enemy = PoolManager.Instance.SpawnFromPool(tag, spawnPosition, Quaternion.identity);
         AudioManager.Instance.PlayPopSound();
         var enemyCtrl = enemy.GetComponent<EnemyController>();
         if (enemyCtrl != null)
@@ -121,6 +120,8 @@ public class EnemySpawner : MonoBehaviour, MMEventListener<EEndLevel>
             enemyCtrl.MoveTo(targetPosition);
         }
     }
+
+
 
     private IEnumerator PlayClip(Animator eanimator, string clipName)
     {

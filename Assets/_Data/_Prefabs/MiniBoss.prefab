@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7288581900264412333, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
+      propertyPath: poolTag
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7566525845472255278, guid: a2a96ff0aec34254391faab76d299cac, type: 3}
       propertyPath: m_Sprite
       value: 

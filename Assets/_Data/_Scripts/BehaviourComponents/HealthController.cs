@@ -68,7 +68,6 @@ public class HealthController : MonoBehaviour
             Debug.Log($"{gameObject.name} - Cloud die");
         }else if (type == Types.Enemy)
         {
-            Debug.Log($"{gameObject.name} - Enemy die");
             gameObject.GetComponent<Collider2D>().enabled = false;
             EnemyController e = gameObject.GetComponent<EnemyController>();
             e.Speed = 0f;
